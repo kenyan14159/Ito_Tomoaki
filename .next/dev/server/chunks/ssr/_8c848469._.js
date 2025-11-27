@@ -31,6 +31,10 @@ const metadata = {
             name: "伊藤智章"
         }
     ],
+    robots: {
+        index: false,
+        follow: false
+    },
     icons: {
         icon: "/ito_tomoaki.jpg",
         apple: "/ito_tomoaki.jpg"
@@ -58,12 +62,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 36,
+            lineNumber: 40,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 35,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }

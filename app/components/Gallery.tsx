@@ -7,6 +7,8 @@ const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const INITIAL_DISPLAY_COUNT = 10;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,48 +40,132 @@ const Gallery = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedImage]);
 
-  // Gallery images - プレースホルダー（後で実際の画像に置き換え）
+  // Gallery images
   const galleryImages = [
     { 
       id: 1, 
       aspectRatio: 'aspect-[4/3]',
-      src: null, // 後で画像を追加
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki1.jpg',
       title: 'Photo 1',
       category: 'Photography'
     },
     { 
       id: 2, 
       aspectRatio: 'aspect-[3/4]',
-      src: null,
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki2.jpg',
       title: 'Photo 2',
       category: 'Photography'
     },
     { 
       id: 3, 
       aspectRatio: 'aspect-[4/3]',
-      src: null,
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki3.jpg',
       title: 'Photo 3',
       category: 'Photography'
     },
     { 
       id: 4, 
       aspectRatio: 'aspect-[1/1]',
-      src: null,
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki4.jpg',
       title: 'Photo 4',
       category: 'Photography'
     },
     { 
       id: 5, 
       aspectRatio: 'aspect-[3/4]',
-      src: null,
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki5.jpg',
       title: 'Photo 5',
       category: 'Photography'
     },
     { 
       id: 6, 
       aspectRatio: 'aspect-[4/3]',
-      src: null,
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki6.jpg',
       title: 'Photo 6',
+      category: 'Photography'
+    },
+    { 
+      id: 7, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki7.jpg',
+      title: 'Photo 7',
+      category: 'Photography'
+    },
+    { 
+      id: 8, 
+      aspectRatio: 'aspect-[3/4]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki8.jpg',
+      title: 'Photo 8',
+      category: 'Photography'
+    },
+    { 
+      id: 9, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki9.jpg',
+      title: 'Photo 9',
+      category: 'Photography'
+    },
+    { 
+      id: 10, 
+      aspectRatio: 'aspect-[1/1]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki10.jpg',
+      title: 'Photo 10',
+      category: 'Photography'
+    },
+    { 
+      id: 11, 
+      aspectRatio: 'aspect-[3/4]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki11.jpg',
+      title: 'Photo 11',
+      category: 'Photography'
+    },
+    { 
+      id: 12, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki12.jpg',
+      title: 'Photo 12',
+      category: 'Photography'
+    },
+    { 
+      id: 13, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki13.jpg',
+      title: 'Photo 13',
+      category: 'Photography'
+    },
+    { 
+      id: 14, 
+      aspectRatio: 'aspect-[3/4]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki14.jpg',
+      title: 'Photo 14',
+      category: 'Photography'
+    },
+    { 
+      id: 15, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki15.jpg',
+      title: 'Photo 15',
+      category: 'Photography'
+    },
+    { 
+      id: 16, 
+      aspectRatio: 'aspect-[1/1]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki16.jpg',
+      title: 'Photo 16',
+      category: 'Photography'
+    },
+    { 
+      id: 17, 
+      aspectRatio: 'aspect-[3/4]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki17.jpg',
+      title: 'Photo 17',
+      category: 'Photography'
+    },
+    { 
+      id: 18, 
+      aspectRatio: 'aspect-[4/3]',
+      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki18.jpg',
+      title: 'Photo 18',
       category: 'Photography'
     },
   ];
@@ -151,17 +237,19 @@ const Gallery = () => {
           </div>
 
           {/* Masonry-style Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
-            {galleryImages.map((image, index) => (
-              <div
-                key={image.id}
-                className={`group cursor-pointer overflow-hidden transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                } ${index === 1 || index === 4 ? 'md:row-span-2' : ''}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onClick={() => image.src && setSelectedImage(index)}
-              >
-                <div className={`relative ${index === 1 || index === 4 ? 'aspect-[3/5] md:aspect-[3/5]' : image.aspectRatio} bg-[var(--color-ink-light)] overflow-hidden`}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {(showAll ? galleryImages : galleryImages.slice(0, INITIAL_DISPLAY_COUNT)).map((image, index) => {
+              return (
+                <div
+                  key={image.id}
+                  className={`group cursor-pointer overflow-hidden transition-all duration-700 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+                  style={{ transitionDelay: `${Math.min(index * 50, 600)}ms` }}
+                  onClick={() => image.src && setSelectedImage(index)}
+                  onContextMenu={(e) => e.preventDefault()}
+                >
+                  <div className="relative aspect-[4/3] bg-[var(--color-ink-light)] overflow-hidden rounded-sm">
                   {/* Placeholder or Image */}
                   {image.src ? (
                     <>
@@ -169,7 +257,8 @@ const Gallery = () => {
                       <img
                         src={image.src}
                         alt={image.title}
-                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                        draggable={false}
                       />
                     </>
                   ) : (
@@ -190,53 +279,45 @@ const Gallery = () => {
                   )}
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
 
-                  {/* Content on hover */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 p-4">
-                    {/* Icon */}
-                    <div className="w-12 h-12 rounded-full border border-white/50 flex items-center justify-center mb-4 transform scale-75 group-hover:scale-100 transition-transform duration-500">
-                      {image.src ? (
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                        </svg>
-                      ) : (
-                        <svg className="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      )}
+                  {/* Zoom icon on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
                     </div>
-                    {/* Title */}
-                    <span className="text-white text-sm font-medium tracking-wider">
-                      {image.src ? image.title : 'Coming Soon'}
-                    </span>
-                    <span className="text-white/60 text-xs mt-1 tracking-[0.15em] uppercase">{image.category}</span>
                   </div>
 
                   {/* Corner decorations */}
                   <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
                   <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* View All CTA */}
-          <div 
-            className={`mt-12 text-center transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '0.6s' }}
-          >
-            <button
-              className="group inline-flex items-center gap-3 px-8 py-4 border border-[var(--color-ink)]/20 text-sm text-[var(--color-ink-soft)] hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300"
+          {!showAll && galleryImages.length > INITIAL_DISPLAY_COUNT && (
+            <div 
+              className={`mt-12 text-center transition-all duration-1000 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: '0.6s' }}
             >
-              <span>すべての写真を見る</span>
-              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
-          </div>
+              <button
+                onClick={() => setShowAll(true)}
+                className="group inline-flex items-center gap-3 px-8 py-4 border border-[var(--color-ink)]/20 text-sm text-[var(--color-ink-soft)] hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300"
+              >
+                <span>すべての写真を見る（残り{galleryImages.length - INITIAL_DISPLAY_COUNT}枚）</span>
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -269,24 +350,23 @@ const Gallery = () => {
           <div
             className="relative max-w-5xl w-full mx-4 animate-fade-in-scale"
             onClick={(e) => e.stopPropagation()}
+            onContextMenu={(e) => e.preventDefault()}
           >
             {/* Image */}
-            <div className="relative aspect-[4/3] md:aspect-[16/10]">
+            <div className="relative flex items-center justify-center" style={{ maxHeight: '80vh' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={galleryImages[selectedImage].src!}
                 alt={galleryImages[selectedImage].title}
-                className="w-full h-full object-contain"
+                className="max-w-full max-h-[80vh] object-contain select-none"
+                draggable={false}
               />
             </div>
 
-            {/* Caption */}
-            <div className="mt-6 text-center">
-              <h3 className="text-lg font-serif text-[var(--color-paper)]">
-                {galleryImages[selectedImage].title}
-              </h3>
-              <p className="text-sm text-[var(--color-paper)]/50 mt-1 tracking-[0.15em] uppercase">
-                {galleryImages[selectedImage].category}
+            {/* Copyright notice */}
+            <div className="mt-4 text-center">
+              <p className="text-xs text-[var(--color-paper)]/40 tracking-wider">
+                © 無断転載禁止 - All Rights Reserved
               </p>
             </div>
           </div>

@@ -2750,6 +2750,8 @@ const Gallery = ()=>{
     const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [selectedImage, setSelectedImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [touchStart, setTouchStart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [showAll, setShowAll] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const INITIAL_DISPLAY_COUNT = 10;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             if (entry.isIntersecting) {
@@ -2776,48 +2778,132 @@ const Gallery = ()=>{
     }, [
         selectedImage
     ]);
-    // Gallery images - プレースホルダー（後で実際の画像に置き換え）
+    // Gallery images
     const galleryImages = [
         {
             id: 1,
             aspectRatio: 'aspect-[4/3]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki1.jpg',
             title: 'Photo 1',
             category: 'Photography'
         },
         {
             id: 2,
             aspectRatio: 'aspect-[3/4]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki2.jpg',
             title: 'Photo 2',
             category: 'Photography'
         },
         {
             id: 3,
             aspectRatio: 'aspect-[4/3]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki3.jpg',
             title: 'Photo 3',
             category: 'Photography'
         },
         {
             id: 4,
             aspectRatio: 'aspect-[1/1]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki4.jpg',
             title: 'Photo 4',
             category: 'Photography'
         },
         {
             id: 5,
             aspectRatio: 'aspect-[3/4]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki5.jpg',
             title: 'Photo 5',
             category: 'Photography'
         },
         {
             id: 6,
             aspectRatio: 'aspect-[4/3]',
-            src: null,
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki6.jpg',
             title: 'Photo 6',
+            category: 'Photography'
+        },
+        {
+            id: 7,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki7.jpg',
+            title: 'Photo 7',
+            category: 'Photography'
+        },
+        {
+            id: 8,
+            aspectRatio: 'aspect-[3/4]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki8.jpg',
+            title: 'Photo 8',
+            category: 'Photography'
+        },
+        {
+            id: 9,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki9.jpg',
+            title: 'Photo 9',
+            category: 'Photography'
+        },
+        {
+            id: 10,
+            aspectRatio: 'aspect-[1/1]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki10.jpg',
+            title: 'Photo 10',
+            category: 'Photography'
+        },
+        {
+            id: 11,
+            aspectRatio: 'aspect-[3/4]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki11.jpg',
+            title: 'Photo 11',
+            category: 'Photography'
+        },
+        {
+            id: 12,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki12.jpg',
+            title: 'Photo 12',
+            category: 'Photography'
+        },
+        {
+            id: 13,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki13.jpg',
+            title: 'Photo 13',
+            category: 'Photography'
+        },
+        {
+            id: 14,
+            aspectRatio: 'aspect-[3/4]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki14.jpg',
+            title: 'Photo 14',
+            category: 'Photography'
+        },
+        {
+            id: 15,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki15.jpg',
+            title: 'Photo 15',
+            category: 'Photography'
+        },
+        {
+            id: 16,
+            aspectRatio: 'aspect-[1/1]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki16.jpg',
+            title: 'Photo 16',
+            category: 'Photography'
+        },
+        {
+            id: 17,
+            aspectRatio: 'aspect-[3/4]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki17.jpg',
+            title: 'Photo 17',
+            category: 'Photography'
+        },
+        {
+            id: 18,
+            aspectRatio: 'aspect-[4/3]',
+            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki18.jpg',
+            title: 'Photo 18',
             category: 'Photography'
         }
     ];
@@ -2857,7 +2943,7 @@ const Gallery = ()=>{
                         className: "absolute top-20 right-10 w-72 h-72 rounded-full border border-[var(--color-gold)]/5 animate-floating-slow"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 124,
+                        lineNumber: 210,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2867,7 +2953,7 @@ const Gallery = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 125,
+                        lineNumber: 211,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2883,7 +2969,7 @@ const Gallery = ()=>{
                                                 className: "gold-line"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 221,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2891,13 +2977,13 @@ const Gallery = ()=>{
                                                 children: "Gallery"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 222,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Gallery.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 220,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2910,7 +2996,7 @@ const Gallery = ()=>{
                                                         children: "ギャラリー"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Gallery.tsx",
-                                                        lineNumber: 140,
+                                                        lineNumber: 226,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2918,13 +3004,13 @@ const Gallery = ()=>{
                                                         children: "趣味で撮影した写真"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Gallery.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 227,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 225,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2943,7 +3029,7 @@ const Gallery = ()=>{
                                                                 d: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 231,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -2953,13 +3039,13 @@ const Gallery = ()=>{
                                                                 d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                                lineNumber: 146,
+                                                                lineNumber: 232,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Gallery.tsx",
-                                                        lineNumber: 144,
+                                                        lineNumber: 230,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2970,46 +3056,49 @@ const Gallery = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Gallery.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 234,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                lineNumber: 143,
+                                                lineNumber: 229,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Gallery.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 224,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 129,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5",
-                                children: galleryImages.map((image, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `group cursor-pointer overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} ${index === 1 || index === 4 ? 'md:row-span-2' : ''}`,
+                                className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4",
+                                children: (showAll ? galleryImages : galleryImages.slice(0, INITIAL_DISPLAY_COUNT)).map((image, index)=>{
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `group cursor-pointer overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`,
                                         style: {
-                                            transitionDelay: `${index * 100}ms`
+                                            transitionDelay: `${Math.min(index * 50, 600)}ms`
                                         },
                                         onClick: ()=>image.src && setSelectedImage(index),
+                                        onContextMenu: (e)=>e.preventDefault(),
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `relative ${index === 1 || index === 4 ? 'aspect-[3/5] md:aspect-[3/5]' : image.aspectRatio} bg-[var(--color-ink-light)] overflow-hidden`,
+                                            className: "relative aspect-[4/3] bg-[var(--color-ink-light)] overflow-hidden rounded-sm",
                                             children: [
                                                 image.src ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                         src: image.src,
                                                         alt: image.title,
-                                                        className: "absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                                                        className: "absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105",
+                                                        draggable: false
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Gallery.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 257,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false) : // Placeholder gradient
@@ -3027,134 +3116,103 @@ const Gallery = ()=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Gallery.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 266,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                                                    className: "absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Gallery.tsx",
-                                                    lineNumber: 193,
+                                                    lineNumber: 282,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 p-4",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-12 h-12 rounded-full border border-white/50 flex items-center justify-center mb-4 transform scale-75 group-hover:scale-100 transition-transform duration-500",
-                                                            children: image.src ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                className: "w-5 h-5 text-white",
-                                                                fill: "none",
-                                                                stroke: "currentColor",
-                                                                viewBox: "0 0 24 24",
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                    strokeLinecap: "round",
-                                                                    strokeLinejoin: "round",
-                                                                    strokeWidth: 1.5,
-                                                                    d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/components/Gallery.tsx",
-                                                                    lineNumber: 201,
-                                                                    columnNumber: 27
-                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                    className: "absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                            className: "w-5 h-5 text-white",
+                                                            fill: "none",
+                                                            stroke: "currentColor",
+                                                            viewBox: "0 0 24 24",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                strokeLinecap: "round",
+                                                                strokeLinejoin: "round",
+                                                                strokeWidth: 1.5,
+                                                                d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                                lineNumber: 200,
-                                                                columnNumber: 25
-                                                            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                className: "w-5 h-5 text-white/50",
-                                                                fill: "none",
-                                                                stroke: "currentColor",
-                                                                viewBox: "0 0 24 24",
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                    strokeLinecap: "round",
-                                                                    strokeLinejoin: "round",
-                                                                    strokeWidth: 1.5,
-                                                                    d: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/components/Gallery.tsx",
-                                                                    lineNumber: 205,
-                                                                    columnNumber: 27
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/Gallery.tsx",
-                                                                lineNumber: 204,
+                                                                lineNumber: 288,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Gallery.tsx",
-                                                            lineNumber: 198,
-                                                            columnNumber: 21
-                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-white text-sm font-medium tracking-wider",
-                                                            children: image.src ? image.title : 'Coming Soon'
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/Gallery.tsx",
-                                                            lineNumber: 210,
-                                                            columnNumber: 21
-                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-white/60 text-xs mt-1 tracking-[0.15em] uppercase",
-                                                            children: image.category
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/Gallery.tsx",
-                                                            lineNumber: 213,
-                                                            columnNumber: 21
+                                                            lineNumber: 287,
+                                                            columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
-                                                    ]
-                                                }, void 0, true, {
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/Gallery.tsx",
+                                                        lineNumber: 286,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
                                                     fileName: "[project]/app/components/Gallery.tsx",
-                                                    lineNumber: 196,
+                                                    lineNumber: 285,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute top-3 left-3 w-6 h-6 border-t border-l border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Gallery.tsx",
-                                                    lineNumber: 217,
+                                                    lineNumber: 294,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Gallery.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 295,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Gallery.tsx",
-                                            lineNumber: 164,
-                                            columnNumber: 17
+                                            lineNumber: 252,
+                                            columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, image.id, false, {
                                         fileName: "[project]/app/components/Gallery.tsx",
-                                        lineNumber: 156,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)))
+                                        lineNumber: 243,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0));
+                                })
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 154,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            !showAll && galleryImages.length > INITIAL_DISPLAY_COUNT && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `mt-12 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`,
                                 style: {
                                     transitionDelay: '0.6s'
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setShowAll(true),
                                     className: "group inline-flex items-center gap-3 px-8 py-4 border border-[var(--color-ink)]/20 text-sm text-[var(--color-ink-soft)] hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "すべての写真を見る"
-                                        }, void 0, false, {
+                                            children: [
+                                                "すべての写真を見る（残り",
+                                                galleryImages.length - INITIAL_DISPLAY_COUNT,
+                                                "枚）"
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/components/Gallery.tsx",
-                                            lineNumber: 234,
-                                            columnNumber: 15
+                                            lineNumber: 314,
+                                            columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            className: "w-4 h-4 transition-transform duration-300 group-hover:translate-x-1",
+                                            className: "w-4 h-4 transition-transform duration-300 group-hover:translate-y-1",
                                             fill: "none",
                                             stroke: "currentColor",
                                             viewBox: "0 0 24 24",
@@ -3162,38 +3220,38 @@ const Gallery = ()=>{
                                                 strokeLinecap: "round",
                                                 strokeLinejoin: "round",
                                                 strokeWidth: 2,
-                                                d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                                                d: "M19 14l-7 7m0 0l-7-7m7 7V3"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Gallery.tsx",
-                                                lineNumber: 236,
-                                                columnNumber: 17
+                                                lineNumber: 316,
+                                                columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Gallery.tsx",
-                                            lineNumber: 235,
-                                            columnNumber: 15
+                                            lineNumber: 315,
+                                            columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/Gallery.tsx",
-                                    lineNumber: 231,
-                                    columnNumber: 13
+                                    lineNumber: 310,
+                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 225,
-                                columnNumber: 11
+                                lineNumber: 304,
+                                columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 127,
+                        lineNumber: 213,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Gallery.tsx",
-                lineNumber: 118,
+                lineNumber: 204,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             selectedImage !== null && galleryImages[selectedImage].src && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3217,17 +3275,17 @@ const Gallery = ()=>{
                                 d: "M6 18L18 6M6 6l12 12"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 257,
+                                lineNumber: 338,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 256,
+                            lineNumber: 337,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 252,
+                        lineNumber: 333,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3238,7 +3296,7 @@ const Gallery = ()=>{
                                 children: selectedImage + 1
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 263,
+                                lineNumber: 344,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3246,71 +3304,66 @@ const Gallery = ()=>{
                                 children: "/"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 264,
+                                lineNumber: 345,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: galleryImages.length
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 265,
+                                lineNumber: 346,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 262,
+                        lineNumber: 343,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative max-w-5xl w-full mx-4 animate-fade-in-scale",
                         onClick: (e)=>e.stopPropagation(),
+                        onContextMenu: (e)=>e.preventDefault(),
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative aspect-[4/3] md:aspect-[16/10]",
+                                className: "relative flex items-center justify-center",
+                                style: {
+                                    maxHeight: '80vh'
+                                },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: galleryImages[selectedImage].src,
                                     alt: galleryImages[selectedImage].title,
-                                    className: "w-full h-full object-contain"
+                                    className: "max-w-full max-h-[80vh] object-contain select-none",
+                                    draggable: false
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Gallery.tsx",
-                                    lineNumber: 276,
+                                    lineNumber: 358,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 274,
+                                lineNumber: 356,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-6 text-center",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg font-serif text-[var(--color-paper)]",
-                                        children: galleryImages[selectedImage].title
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/Gallery.tsx",
-                                        lineNumber: 285,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-sm text-[var(--color-paper)]/50 mt-1 tracking-[0.15em] uppercase",
-                                        children: galleryImages[selectedImage].category
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/Gallery.tsx",
-                                        lineNumber: 288,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                                className: "mt-4 text-center",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-[var(--color-paper)]/40 tracking-wider",
+                                    children: "© 無断転載禁止 - All Rights Reserved"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/Gallery.tsx",
+                                    lineNumber: 368,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 284,
+                                lineNumber: 367,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 269,
+                        lineNumber: 350,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3331,17 +3384,17 @@ const Gallery = ()=>{
                                 d: "M15 19l-7-7 7-7"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 303,
+                                lineNumber: 383,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 302,
+                            lineNumber: 382,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 295,
+                        lineNumber: 375,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3362,17 +3415,17 @@ const Gallery = ()=>{
                                 d: "M9 5l7 7-7 7"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 314,
+                                lineNumber: 394,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 313,
+                            lineNumber: 393,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 306,
+                        lineNumber: 386,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3385,12 +3438,12 @@ const Gallery = ()=>{
                                 className: `w-2 h-2 rounded-full transition-all duration-300 ${index === selectedImage ? 'bg-[var(--color-gold)] w-6' : img.src ? 'bg-[var(--color-paper)]/30 hover:bg-[var(--color-paper)]/50' : 'bg-[var(--color-paper)]/10'}`
                             }, index, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 321,
+                                lineNumber: 401,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 319,
+                        lineNumber: 399,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3398,13 +3451,13 @@ const Gallery = ()=>{
                         children: "スワイプで移動"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 339,
+                        lineNumber: 419,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Gallery.tsx",
-                lineNumber: 245,
+                lineNumber: 326,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]

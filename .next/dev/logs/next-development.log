@@ -1,8 +1,7 @@
-[00:00:00.791] Server  LOG      ✓ Ready in 603ms
-[00:00:02.845] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:03.248] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.649] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.818] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.709] Server  LOG      ✓ Ready in 532ms
+[00:00:06.977] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:07.260] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.436] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -32,24 +31,22 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="ja"
--                         data-redeviation-bs-uid="i43a1mpo6ld"
+-                         data-redeviation-bs-uid="pc3dq7knqu"
                         >
                   ...
 
-[00:00:05.818] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:53.669] Server  LOG      ✓ Compiled in 96ms
-[00:02:05.309] Server  LOG      ✓ Compiled in 158ms
-[00:02:34.972] Server  LOG      ✓ Compiled in 70ms
-[00:03:34.412] Server  LOG      ✓ Compiled in 282ms
-[00:04:24.127] Server  LOG      ✓ Compiled in 210ms
-[00:05:41.387] Server  LOG      ✓ Compiled in 75ms
-[00:07:02.494] Server  LOG      ✓ Compiled in 229ms
-[00:09:56.088] Server  LOG      ✓ Compiled in 220ms
-[00:09:56.156] Browser WARN    Image with src "/rairakku.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:11:50.549] Server  LOG      ✓ Compiled in 83ms
-[00:12:02.210] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:12:02.585] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:02.784] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:07.436] Browser WARN    Image with src "/haritiryo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.436] Browser WARN    Image with src "/okyu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.436] Browser WARN    Image with src "/denki.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.436] Browser WARN    Image with src "/kappingu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.436] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:04.341] Server  LOG      ✓ Compiled in 95ms
+[00:05:16.629] Server  LOG      ✓ Compiled in 80ms
+[00:05:32.772] Server  LOG      ✓ Compiled in 38ms
+[00:06:02.790] Server  LOG      ✓ Compiled in 62ms
+[00:06:12.567] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:06:12.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:12.960] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -79,185 +76,8 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="ja"
--                         data-redeviation-bs-uid="lp8h2d7df6n"
+-                         data-redeviation-bs-uid="gknrvnichu6"
                         >
                   ...
 
-[00:12:19.418] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:12:35.381] Server  LOG      ✓ Compiled in 40ms
-[00:13:50.697] Server  LOG      ✓ Compiled in 97ms
-[00:15:04.299] Server  LOG      ✓ Compiled in 105ms
-[00:15:36.331] Server  LOG      ✓ Compiled in 34ms
-[00:15:42.964] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:43.620] Browser WARN    Image with src "/haritiryo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:43.620] Browser WARN    Image with src "/okyu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:43.620] Browser WARN    Image with src "/denki.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:43.620] Browser WARN    Image with src "/kappingu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:59.894] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:16:00.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:18.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:18.294] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="ja"
--                         data-redeviation-bs-uid="or3dhwpnavo"
-                        >
-                  ...
-
-[00:17:18.294] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:17:39.944] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="ja"
--                         data-redeviation-bs-uid="em1iq2vux96"
-                        >
-                  ...
-
-[00:17:56.489] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:18:09.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:09.549] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="ja"
--                         data-redeviation-bs-uid="t73fnapgatq"
-                        >
-                  ...
-
-[00:18:32.844] Server  LOG      ✓ Compiled in 103ms
-[00:18:38.482] Server  LOG      ✓ Compiled in 24ms
-[00:19:48.455] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:19:48.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:21:21.301] Server  LOG      ✓ Compiled in 76ms
-[00:21:33.143] Server  LOG      ✓ Compiled in 65ms
-[00:21:56.642] Server  LOG      ✓ Compiled in 103ms
-[00:21:56.744] Browser ERROR   ./app/components/Hero.tsx:243:17
-Parsing ecmascript source code failed
-  241 |         {/* Japanese pattern overlay - subtle */}
-  242 |         <div className="absolute inset-0 z-[11] pattern-asanoha opacity-30 pointer-events-none" />
-> 243 |       </section>
-      |                 ^
-> 244 |
-      | ^
-> 245 |       {/* Modal */}
-      | ^^^^^^^
-  246 |       {isModalOpen && (
-  247 |         <div 
-  248 |           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md cursor-pointer animate-fade-in"
-
-Expected '</', got 'jsx text (
-
-      )'
-
-Import trace:
-  Server Component:
-    ./app/components/Hero.tsx
-    ./app/page.tsx
-[00:21:57.620] Browser ERROR   ./app/components/Hero.tsx:243:17
-Parsing ecmascript source code failed
-  241 |         {/* Japanese pattern overlay - subtle */}
-  242 |         <div className="absolute inset-0 z-[11] pattern-asanoha opacity-30 pointer-events-none" />
-> 243 |       </section>
-      |                 ^
-> 244 |
-      | ^
-> 245 |       {/* Modal */}
-      | ^^^^^^^
-  246 |       {isModalOpen && (
-  247 |         <div 
-  248 |           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md cursor-pointer animate-fade-in"
-
-Expected '</', got 'jsx text (
-
-      )'
-
-Import trace:
-  Server Component:
-    ./app/components/Hero.tsx
-    ./app/page.tsx
-[00:22:15.985] Server  LOG      ✓ Compiled in 34ms
-[00:22:16.150] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:22:34.878] Server  LOG      ✓ Compiled in 27ms
-[00:22:43.488] Server  LOG      ✓ Compiled in 75ms
-[00:22:51.127] Server  LOG      ✓ Compiled in 28ms
-[00:24:19.883] Server  LOG      ✓ Compiled in 84ms
-[00:24:35.517] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:24:35.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:31.960] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:17.757] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
