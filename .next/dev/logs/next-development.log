@@ -1,7 +1,7 @@
-[00:00:00.709] Server  LOG      ✓ Ready in 532ms
-[00:00:06.977] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:07.260] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.436] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.705] Server  LOG      ✓ Ready in 528ms
+[00:00:04.662] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:04.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.124] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -31,22 +31,20 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="ja"
--                         data-redeviation-bs-uid="pc3dq7knqu"
+-                         data-redeviation-bs-uid="oolbkiqllpe"
                         >
                   ...
 
-[00:00:07.436] Browser WARN    Image with src "/haritiryo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:07.436] Browser WARN    Image with src "/okyu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:07.436] Browser WARN    Image with src "/denki.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:07.436] Browser WARN    Image with src "/kappingu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:07.436] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.341] Server  LOG      ✓ Compiled in 95ms
-[00:05:16.629] Server  LOG      ✓ Compiled in 80ms
-[00:05:32.772] Server  LOG      ✓ Compiled in 38ms
-[00:06:02.790] Server  LOG      ✓ Compiled in 62ms
-[00:06:12.567] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:06:12.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:12.960] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:05.124] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.305] Browser WARN    Image with src "/haritiryo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.305] Browser WARN    Image with src "/okyu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.305] Browser WARN    Image with src "/kappingu.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.305] Browser WARN    Image with src "/denki.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:56.428] Server  LOG      ✓ Compiled in 225ms
+[00:03:44.820] Server  LOG      ✓ Compiled in 78ms
+[00:04:30.222] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:04:30.590] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:30.789] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -76,8 +74,142 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="ja"
--                         data-redeviation-bs-uid="gknrvnichu6"
+-                         data-redeviation-bs-uid="lmvm1ypsfg"
                         >
+                          ...
+                            <div className="grid grid-...">
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo5-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg"
++                                   alt="Photo 5"
+-                                   alt="Photo 14"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo36-scaled.jpg"
++                                   alt="Photo 1"
+-                                   alt="Photo 36"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg"
++                                   alt="Photo 37"
+-                                   alt="Photo 6"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo15-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo24-scaled.jpg"
++                                   alt="Photo 15"
+-                                   alt="Photo 24"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo31-scaled.jpg"
++                                   alt="Photo 6"
+-                                   alt="Photo 31"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo2-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo23-scaled.jpg"
++                                   alt="Photo 2"
+-                                   alt="Photo 23"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo20-scaled.jpg"
++                                   alt="Photo 34"
+-                                   alt="Photo 20"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo18-scaled.jpg"
++                                   alt="Photo 13"
+-                                   alt="Photo 18"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo32-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg"
++                                   alt="Photo 32"
+-                                   alt="Photo 12"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo28-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg"
++                                   alt="Photo 28"
+-                                   alt="Photo 30"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo10-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg"
++                                   alt="Photo 10"
+-                                   alt="Photo 7"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo26-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg"
++                                   alt="Photo 26"
+-                                   alt="Photo 13"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
                   ...
 
-[00:06:17.757] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:04:48.041] Browser WARN    Image with src "/rairakku.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -8,7 +8,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-  const INITIAL_DISPLAY_COUNT = 10;
+  const INITIAL_DISPLAY_COUNT = 12;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,143 +42,64 @@ const Gallery = () => {
 
   // Gallery images
   const galleryImages = [
-    { 
-      id: 1, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki1.jpg',
-      title: 'Photo 1',
-      category: 'Photography'
-    },
-    { 
-      id: 2, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki2.jpg',
-      title: 'Photo 2',
-      category: 'Photography'
-    },
-    { 
-      id: 3, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki3.jpg',
-      title: 'Photo 3',
-      category: 'Photography'
-    },
-    { 
-      id: 4, 
-      aspectRatio: 'aspect-[1/1]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki4.jpg',
-      title: 'Photo 4',
-      category: 'Photography'
-    },
-    { 
-      id: 5, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki5.jpg',
-      title: 'Photo 5',
-      category: 'Photography'
-    },
-    { 
-      id: 6, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki6.jpg',
-      title: 'Photo 6',
-      category: 'Photography'
-    },
-    { 
-      id: 7, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki7.jpg',
-      title: 'Photo 7',
-      category: 'Photography'
-    },
-    { 
-      id: 8, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki8.jpg',
-      title: 'Photo 8',
-      category: 'Photography'
-    },
-    { 
-      id: 9, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki9.jpg',
-      title: 'Photo 9',
-      category: 'Photography'
-    },
-    { 
-      id: 10, 
-      aspectRatio: 'aspect-[1/1]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki10.jpg',
-      title: 'Photo 10',
-      category: 'Photography'
-    },
-    { 
-      id: 11, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki11.jpg',
-      title: 'Photo 11',
-      category: 'Photography'
-    },
-    { 
-      id: 12, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki12.jpg',
-      title: 'Photo 12',
-      category: 'Photography'
-    },
-    { 
-      id: 13, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki13.jpg',
-      title: 'Photo 13',
-      category: 'Photography'
-    },
-    { 
-      id: 14, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki14.jpg',
-      title: 'Photo 14',
-      category: 'Photography'
-    },
-    { 
-      id: 15, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki15.jpg',
-      title: 'Photo 15',
-      category: 'Photography'
-    },
-    { 
-      id: 16, 
-      aspectRatio: 'aspect-[1/1]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki16.jpg',
-      title: 'Photo 16',
-      category: 'Photography'
-    },
-    { 
-      id: 17, 
-      aspectRatio: 'aspect-[3/4]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki17.jpg',
-      title: 'Photo 17',
-      category: 'Photography'
-    },
-    { 
-      id: 18, 
-      aspectRatio: 'aspect-[4/3]',
-      src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito_Tomoaki18.jpg',
-      title: 'Photo 18',
-      category: 'Photography'
-    },
+    { id: 1, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg', title: 'Photo 1', category: 'Photography' },
+    { id: 2, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo2-scaled.jpg', title: 'Photo 2', category: 'Photography' },
+    { id: 3, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo3-scaled.jpg', title: 'Photo 3', category: 'Photography' },
+    { id: 4, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo4-scaled.jpg', title: 'Photo 4', category: 'Photography' },
+    { id: 5, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo5-scaled.jpg', title: 'Photo 5', category: 'Photography' },
+    { id: 6, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg', title: 'Photo 6', category: 'Photography' },
+    { id: 7, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg', title: 'Photo 7', category: 'Photography' },
+    { id: 8, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo8-scaled.jpg', title: 'Photo 8', category: 'Photography' },
+    { id: 9, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo9-scaled.jpg', title: 'Photo 9', category: 'Photography' },
+    { id: 10, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo10-scaled.jpg', title: 'Photo 10', category: 'Photography' },
+    { id: 11, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo11-scaled.jpg', title: 'Photo 11', category: 'Photography' },
+    { id: 12, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg', title: 'Photo 12', category: 'Photography' },
+    { id: 13, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg', title: 'Photo 13', category: 'Photography' },
+    { id: 14, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg', title: 'Photo 14', category: 'Photography' },
+    { id: 15, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo15-scaled.jpg', title: 'Photo 15', category: 'Photography' },
+    { id: 16, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo16-scaled.jpg', title: 'Photo 16', category: 'Photography' },
+    { id: 17, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo17-scaled.jpg', title: 'Photo 17', category: 'Photography' },
+    { id: 18, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo18-scaled.jpg', title: 'Photo 18', category: 'Photography' },
+    { id: 19, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo19-scaled.jpg', title: 'Photo 19', category: 'Photography' },
+    { id: 20, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo20-scaled.jpg', title: 'Photo 20', category: 'Photography' },
+    { id: 21, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo21-scaled.jpg', title: 'Photo 21', category: 'Photography' },
+    { id: 22, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo22-scaled.jpg', title: 'Photo 22', category: 'Photography' },
+    { id: 23, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo23-scaled.jpg', title: 'Photo 23', category: 'Photography' },
+    { id: 24, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo24-scaled.jpg', title: 'Photo 24', category: 'Photography' },
+    { id: 25, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo25-scaled.jpg', title: 'Photo 25', category: 'Photography' },
+    { id: 26, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo26-scaled.jpg', title: 'Photo 26', category: 'Photography' },
+    { id: 27, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo27-scaled.jpg', title: 'Photo 27', category: 'Photography' },
+    { id: 28, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo28-scaled.jpg', title: 'Photo 28', category: 'Photography' },
+    { id: 29, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo29-scaled.jpg', title: 'Photo 29', category: 'Photography' },
+    { id: 30, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg', title: 'Photo 30', category: 'Photography' },
+    { id: 31, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo31-scaled.jpg', title: 'Photo 31', category: 'Photography' },
+    { id: 32, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo32-scaled.jpg', title: 'Photo 32', category: 'Photography' },
+    { id: 33, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo33-scaled.jpg', title: 'Photo 33', category: 'Photography' },
+    { id: 34, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg', title: 'Photo 34', category: 'Photography' },
+    { id: 35, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo35-scaled.jpg', title: 'Photo 35', category: 'Photography' },
+    { id: 36, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo36-scaled.jpg', title: 'Photo 36', category: 'Photography' },
+    { id: 37, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg', title: 'Photo 37', category: 'Photography' },
   ];
+
+  // ランダムにシャッフルした画像配列（初回レンダリング時に固定）
+  const shuffledImages = useMemo(() => {
+    const shuffled = [...galleryImages];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }, []);
 
   const closeModal = () => setSelectedImage(null);
 
   const navigateImage = (direction: number) => {
     if (selectedImage === null) return;
     const newIndex = selectedImage + direction;
-    if (newIndex >= 0 && newIndex < galleryImages.length) {
+    if (newIndex >= 0 && newIndex < shuffledImages.length) {
       setSelectedImage(newIndex);
     } else if (newIndex < 0) {
-      setSelectedImage(galleryImages.length - 1);
+      setSelectedImage(shuffledImages.length - 1);
     } else {
       setSelectedImage(0);
     }
@@ -238,7 +159,7 @@ const Gallery = () => {
 
           {/* Masonry-style Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {(showAll ? galleryImages : galleryImages.slice(0, INITIAL_DISPLAY_COUNT)).map((image, index) => {
+            {(showAll ? shuffledImages : shuffledImages.slice(0, INITIAL_DISPLAY_COUNT)).map((image, index) => {
               return (
                 <div
                   key={image.id}
@@ -249,7 +170,7 @@ const Gallery = () => {
                   onClick={() => image.src && setSelectedImage(index)}
                   onContextMenu={(e) => e.preventDefault()}
                 >
-                  <div className="relative aspect-[4/3] bg-[var(--color-ink-light)] overflow-hidden rounded-sm">
+                  <div className="relative aspect-[3/4] bg-[var(--color-ink-light)] overflow-hidden rounded-sm">
                   {/* Placeholder or Image */}
                   {image.src ? (
                     <>
@@ -300,7 +221,7 @@ const Gallery = () => {
           </div>
 
           {/* View All CTA */}
-          {!showAll && galleryImages.length > INITIAL_DISPLAY_COUNT && (
+          {!showAll && shuffledImages.length > INITIAL_DISPLAY_COUNT && (
             <div 
               className={`mt-12 text-center transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -311,7 +232,7 @@ const Gallery = () => {
                 onClick={() => setShowAll(true)}
                 className="group inline-flex items-center gap-3 px-8 py-4 border border-[var(--color-ink)]/20 text-sm text-[var(--color-ink-soft)] hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300"
               >
-                <span>すべての写真を見る（残り{galleryImages.length - INITIAL_DISPLAY_COUNT}枚）</span>
+                <span>すべての写真を見る（残り{shuffledImages.length - INITIAL_DISPLAY_COUNT}枚）</span>
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -322,7 +243,7 @@ const Gallery = () => {
       </section>
 
       {/* Enhanced Lightbox Modal */}
-      {selectedImage !== null && galleryImages[selectedImage].src && (
+      {selectedImage !== null && shuffledImages[selectedImage].src && (
         <div
           className="fixed inset-0 z-50 bg-[var(--color-ink)]/98 flex items-center justify-center animate-fade-in"
           onClick={closeModal}
@@ -343,7 +264,7 @@ const Gallery = () => {
           <div className="absolute top-6 left-6 text-[var(--color-paper)]/50 text-sm tracking-wider">
             <span className="text-[var(--color-gold)]">{selectedImage + 1}</span>
             <span className="mx-2">/</span>
-            <span>{galleryImages.length}</span>
+            <span>{shuffledImages.length}</span>
           </div>
 
           {/* Main image container */}
@@ -356,8 +277,8 @@ const Gallery = () => {
             <div className="relative flex items-center justify-center" style={{ maxHeight: '80vh' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={galleryImages[selectedImage].src!}
-                alt={galleryImages[selectedImage].title}
+                src={shuffledImages[selectedImage].src!}
+                alt={shuffledImages[selectedImage].title}
                 className="max-w-full max-h-[80vh] object-contain select-none"
                 draggable={false}
               />
@@ -396,15 +317,15 @@ const Gallery = () => {
           </button>
 
           {/* Thumbnail navigation */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {galleryImages.map((img, index) => (
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 max-w-[80vw] overflow-x-auto">
+            {shuffledImages.slice(0, 20).map((img, index) => (
               <button
                 key={index}
                 onClick={(e) => {
                   e.stopPropagation();
                   if (img.src) setSelectedImage(index);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0 ${
                   index === selectedImage
                     ? 'bg-[var(--color-gold)] w-6'
                     : img.src

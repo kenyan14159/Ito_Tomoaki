@@ -110,7 +110,7 @@ const Achievements = () => {
                   日本体育大学
                 </h3>
                 <p className="text-base text-[var(--color-paper)]/60 mb-4">
-                  陸上競技部 駅伝ブロック
+                  男子駅伝ブロック
                 </p>
                 
                 {/* Stats */}
