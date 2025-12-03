@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ImageModal from './ImageModal';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,18 +15,7 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isModalOpen]);
-
-  const profileImageUrl = 'https://nssu-ekiden.com/wp-content/uploads/2025/02/itotomoaki.jpg';
+  const profileImageUrl = '/itotomoaki.jpg';
 
   // Split text for character animation
   const nameChars = '伊藤智章'.split('');
@@ -205,34 +195,13 @@ const Hero = () => {
         <div className="absolute inset-0 z-[11] pattern-asanoha opacity-30 pointer-events-none" />
       </section>
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md cursor-pointer animate-fade-in"
-          onClick={() => setIsModalOpen(false)}
-        >
-          <button
-            className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white/70 hover:text-white hover:rotate-90 transition-all duration-300"
-            onClick={() => setIsModalOpen(false)}
-            aria-label="閉じる"
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div 
-            className="relative max-w-4xl max-h-[90vh] w-full mx-4 animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={profileImageUrl}
-              alt="伊藤智章"
-              className="object-contain w-full h-auto max-h-[90vh] shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
+      {/* Modal - 共通コンポーネントを使用 */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={profileImageUrl}
+        imageAlt="伊藤智章"
+      />
     </>
   );
 };

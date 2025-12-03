@@ -32,8 +32,8 @@ const metadata = {
         }
     ],
     robots: {
-        index: false,
-        follow: false
+        index: true,
+        follow: true
     },
     icons: {
         icon: "/ito_tomoaki.jpg",

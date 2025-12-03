@@ -400,7 +400,7 @@ const Hero = ()=>{
     }["Hero.useEffect"], [
         isModalOpen
     ]);
-    const profileImageUrl = 'https://nssu-ekiden.com/wp-content/uploads/2025/02/itotomoaki.jpg';
+    const profileImageUrl = '/ito_tomoaki.jpg';
     // Split text for character animation
     const nameChars = '伊藤智章'.split('');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -854,7 +854,7 @@ const Profile = ()=>{
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const profileImageUrl = 'https://nssu-ekiden.com/wp-content/uploads/2025/02/itotomoaki.jpg';
+    const profileImageUrl = '/ito_tomoaki.jpg';
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Profile.useEffect": ()=>{
             const observer = new IntersectionObserver({
@@ -938,12 +938,12 @@ const Profile = ()=>{
                     d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Profile.tsx",
-                    lineNumber: 64,
+                    lineNumber: 65,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -959,12 +959,12 @@ const Profile = ()=>{
                     d: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Profile.tsx",
-                    lineNumber: 74,
+                    lineNumber: 75,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 73,
+                lineNumber: 74,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -980,12 +980,12 @@ const Profile = ()=>{
                     d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Profile.tsx",
-                    lineNumber: 84,
+                    lineNumber: 85,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 83,
+                lineNumber: 84,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1001,12 +1001,12 @@ const Profile = ()=>{
                     d: "M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.187.408-2.281 1.333-3.08.853-.737 2.063-1.17 3.504-1.252 1.048-.06 2.015.043 2.881.308-.088-1.013-.471-1.773-1.148-2.273-.775-.572-1.932-.861-3.443-.861h-.016c-1.228.007-2.214.28-2.93.813l-1.132-1.71c1.081-.804 2.523-1.218 4.287-1.233h.023c1.973 0 3.54.467 4.658 1.388.94.773 1.548 1.86 1.816 3.238.746.324 1.412.744 1.98 1.253 1.056.945 1.67 2.181 1.823 3.676.186 1.818-.28 3.703-1.348 5.46-1.2 1.974-3.088 3.469-5.618 4.446-1.476.57-3.094.859-4.812.859z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Profile.tsx",
-                    lineNumber: 94,
+                    lineNumber: 95,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 93,
+                lineNumber: 94,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -1025,7 +1025,7 @@ const Profile = ()=>{
                                 className: "absolute top-[10%] right-[5%] w-72 h-72 rounded-full border border-[var(--color-gold)]/5 animate-floating-slow"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 110,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1035,34 +1035,34 @@ const Profile = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 111,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-[50%] right-[15%] w-24 h-24 rounded-full bg-[var(--color-gold)]/3 animate-gentle-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 112,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-transparent via-[var(--color-ink)]/5 to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 115,
+                                lineNumber: 116,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 right-[10%] w-px h-full bg-gradient-to-b from-transparent via-[var(--color-gold)]/10 to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 116,
+                                lineNumber: 117,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Profile.tsx",
-                        lineNumber: 108,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1083,28 +1083,28 @@ const Profile = ()=>{
                                                     className: "absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 133,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-4 border border-[var(--color-gold)]/20 pointer-events-none transition-all duration-500 group-hover:inset-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 140,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-[var(--color-gold)]/30 transition-all duration-500 group-hover:w-20 group-hover:h-20"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 142,
+                                                    lineNumber: 143,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-[var(--color-gold)]/30 transition-all duration-500 group-hover:w-20 group-hover:h-20"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 143,
+                                                    lineNumber: 144,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1125,46 +1125,46 @@ const Profile = ()=>{
                                                                     d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 150,
+                                                                    lineNumber: 151,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Profile.tsx",
-                                                                lineNumber: 149,
+                                                                lineNumber: 150,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 148,
+                                                            lineNumber: 149,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Profile.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 148,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 128,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `absolute -bottom-8 -right-8 w-32 h-32 border border-[var(--color-gold)]/20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 159,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/Profile.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1177,7 +1177,7 @@ const Profile = ()=>{
                                                     className: "gold-line"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 173,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1185,13 +1185,13 @@ const Profile = ()=>{
                                                     children: "Profile"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 175,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 172,
+                                            lineNumber: 173,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1199,7 +1199,7 @@ const Profile = ()=>{
                                             children: "伊藤智章"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 179,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1207,7 +1207,7 @@ const Profile = ()=>{
                                             children: "いとう ともあき"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 181,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1215,7 +1215,7 @@ const Profile = ()=>{
                                             children: "ITO TOMOAKI"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 182,
+                                            lineNumber: 183,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1226,7 +1226,7 @@ const Profile = ()=>{
                                                     children: "ライラック治療院にて、鍼灸師として施術を通じて選手たちのコンディショニングをサポートしています。"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 188,
+                                                    lineNumber: 189,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1234,13 +1234,13 @@ const Profile = ()=>{
                                                     children: "施術は一般の方も受診可能です。心身のケアにご興味のある方は、お気軽にご相談ください。"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 192,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1250,7 +1250,7 @@ const Profile = ()=>{
                                                     className: "absolute top-0 right-0 w-12 h-12 border-t border-r border-[var(--color-gold)]/20 transition-all duration-300 group-hover:w-16 group-hover:h-16"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 199,
+                                                    lineNumber: 200,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1266,7 +1266,7 @@ const Profile = ()=>{
                                                                     children: item.label
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 210,
+                                                                    lineNumber: 211,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1274,24 +1274,24 @@ const Profile = ()=>{
                                                                     children: item.value
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 211,
+                                                                    lineNumber: 212,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, index, true, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 203,
+                                                            lineNumber: 204,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 202,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 198,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1313,7 +1313,7 @@ const Profile = ()=>{
                                                                     d: "M12 14l9-5-9-5-9 5 9 5z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 221,
+                                                                    lineNumber: 222,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1323,26 +1323,26 @@ const Profile = ()=>{
                                                                     d: "M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 222,
+                                                                    lineNumber: 223,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 220,
+                                                            lineNumber: 221,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "学歴"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 224,
+                                                            lineNumber: 225,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 219,
+                                                    lineNumber: 220,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1355,7 +1355,7 @@ const Profile = ()=>{
                                                                     children: item.type
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 232,
+                                                                    lineNumber: 233,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1365,7 +1365,7 @@ const Profile = ()=>{
                                                                             children: item.name
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                                            lineNumber: 236,
+                                                                            lineNumber: 237,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1377,30 +1377,30 @@ const Profile = ()=>{
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                                            lineNumber: 237,
+                                                                            lineNumber: 238,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 235,
+                                                                    lineNumber: 236,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, index, true, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 228,
+                                                            lineNumber: 229,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 227,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 219,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1421,25 +1421,25 @@ const Profile = ()=>{
                                                                 d: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Profile.tsx",
-                                                                lineNumber: 248,
+                                                                lineNumber: 249,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 248,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "資格"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 250,
+                                                            lineNumber: 251,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 247,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1451,7 +1451,7 @@ const Profile = ()=>{
                                                                     className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 259,
+                                                                    lineNumber: 260,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1459,24 +1459,24 @@ const Profile = ()=>{
                                                                     children: qual
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                                    lineNumber: 260,
+                                                                    lineNumber: 261,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, index, true, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 254,
+                                                            lineNumber: 255,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 252,
+                                                    lineNumber: 253,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 246,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1496,25 +1496,25 @@ const Profile = ()=>{
                                                                 d: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Profile.tsx",
-                                                                lineNumber: 270,
+                                                                lineNumber: 271,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 269,
+                                                            lineNumber: 270,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "SNS"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 272,
+                                                            lineNumber: 273,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 269,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1528,41 +1528,41 @@ const Profile = ()=>{
                                                             children: social.icon
                                                         }, social.name, false, {
                                                             fileName: "[project]/app/components/Profile.tsx",
-                                                            lineNumber: 276,
+                                                            lineNumber: 277,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Profile.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 275,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Profile.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 268,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/Profile.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/Profile.tsx",
-                            lineNumber: 120,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Profile.tsx",
-                        lineNumber: 119,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 102,
+                lineNumber: 103,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1585,17 +1585,17 @@ const Profile = ()=>{
                                 d: "M6 18L18 6M6 6l12 12"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Profile.tsx",
-                                lineNumber: 306,
+                                lineNumber: 307,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Profile.tsx",
-                            lineNumber: 305,
+                            lineNumber: 306,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Profile.tsx",
-                        lineNumber: 300,
+                        lineNumber: 301,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1607,18 +1607,18 @@ const Profile = ()=>{
                             className: "object-contain w-full h-auto max-h-[90vh] shadow-2xl"
                         }, void 0, false, {
                             fileName: "[project]/app/components/Profile.tsx",
-                            lineNumber: 314,
+                            lineNumber: 315,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Profile.tsx",
-                        lineNumber: 309,
+                        lineNumber: 310,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Profile.tsx",
-                lineNumber: 296,
+                lineNumber: 297,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -1840,7 +1840,7 @@ const Achievements = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-2 border-[var(--color-gold)]/30 transition-all duration-500 group-hover:border-[var(--color-gold)]/60",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                        src: "https://wprs.my-hobby.space/wp-content/uploads/2025/10/nssu.jpg",
+                                                        src: "/nssu.jpg",
                                                         alt: "日本体育大学",
                                                         className: "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                     }, void 0, false, {
@@ -2875,223 +2875,223 @@ const Gallery = ()=>{
     const galleryImages = [
         {
             id: 1,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg',
+            src: '/ito_gallery/Ito-photo1.JPG',
             title: 'Photo 1',
             category: 'Photography'
         },
         {
             id: 2,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo2-scaled.jpg',
+            src: '/ito_gallery/Ito-photo2.JPG',
             title: 'Photo 2',
             category: 'Photography'
         },
         {
             id: 3,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo3-scaled.jpg',
+            src: '/ito_gallery/Ito-photo3.JPG',
             title: 'Photo 3',
             category: 'Photography'
         },
         {
             id: 4,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo4-scaled.jpg',
+            src: '/ito_gallery/Ito-photo4.JPG',
             title: 'Photo 4',
             category: 'Photography'
         },
         {
             id: 5,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo5-scaled.jpg',
+            src: '/ito_gallery/Ito-photo5.JPG',
             title: 'Photo 5',
             category: 'Photography'
         },
         {
             id: 6,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg',
+            src: '/ito_gallery/Ito-photo6.JPG',
             title: 'Photo 6',
             category: 'Photography'
         },
         {
             id: 7,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg',
+            src: '/ito_gallery/Ito-photo7.JPG',
             title: 'Photo 7',
             category: 'Photography'
         },
         {
             id: 8,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo8-scaled.jpg',
+            src: '/ito_gallery/Ito-photo8.JPG',
             title: 'Photo 8',
             category: 'Photography'
         },
         {
             id: 9,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo9-scaled.jpg',
+            src: '/ito_gallery/Ito-photo9.JPG',
             title: 'Photo 9',
             category: 'Photography'
         },
         {
             id: 10,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo10-scaled.jpg',
+            src: '/ito_gallery/Ito-photo10.JPG',
             title: 'Photo 10',
             category: 'Photography'
         },
         {
             id: 11,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo11-scaled.jpg',
+            src: '/ito_gallery/Ito-photo11.JPG',
             title: 'Photo 11',
             category: 'Photography'
         },
         {
             id: 12,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg',
+            src: '/ito_gallery/Ito-photo12.JPG',
             title: 'Photo 12',
             category: 'Photography'
         },
         {
             id: 13,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg',
+            src: '/ito_gallery/Ito-photo13.JPG',
             title: 'Photo 13',
             category: 'Photography'
         },
         {
             id: 14,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg',
+            src: '/ito_gallery/Ito-photo14.JPG',
             title: 'Photo 14',
             category: 'Photography'
         },
         {
             id: 15,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo15-scaled.jpg',
+            src: '/ito_gallery/Ito-photo15.JPG',
             title: 'Photo 15',
             category: 'Photography'
         },
         {
             id: 16,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo16-scaled.jpg',
+            src: '/ito_gallery/Ito-photo16.JPG',
             title: 'Photo 16',
             category: 'Photography'
         },
         {
             id: 17,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo17-scaled.jpg',
+            src: '/ito_gallery/Ito-photo17.JPG',
             title: 'Photo 17',
             category: 'Photography'
         },
         {
             id: 18,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo18-scaled.jpg',
+            src: '/ito_gallery/Ito-photo18.JPG',
             title: 'Photo 18',
             category: 'Photography'
         },
         {
             id: 19,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo19-scaled.jpg',
+            src: '/ito_gallery/Ito-photo19.JPG',
             title: 'Photo 19',
             category: 'Photography'
         },
         {
             id: 20,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo20-scaled.jpg',
+            src: '/ito_gallery/Ito-photo20.JPG',
             title: 'Photo 20',
             category: 'Photography'
         },
         {
             id: 21,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo21-scaled.jpg',
+            src: '/ito_gallery/Ito-photo21.JPG',
             title: 'Photo 21',
             category: 'Photography'
         },
         {
             id: 22,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo22-scaled.jpg',
+            src: '/ito_gallery/Ito-photo22.JPG',
             title: 'Photo 22',
             category: 'Photography'
         },
         {
             id: 23,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo23-scaled.jpg',
+            src: '/ito_gallery/Ito-photo23.JPG',
             title: 'Photo 23',
             category: 'Photography'
         },
         {
             id: 24,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo24-scaled.jpg',
+            src: '/ito_gallery/Ito-photo24.JPG',
             title: 'Photo 24',
             category: 'Photography'
         },
         {
             id: 25,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo25-scaled.jpg',
+            src: '/ito_gallery/Ito-photo25.JPG',
             title: 'Photo 25',
             category: 'Photography'
         },
         {
             id: 26,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo26-scaled.jpg',
+            src: '/ito_gallery/Ito-photo26.JPG',
             title: 'Photo 26',
             category: 'Photography'
         },
         {
             id: 27,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo27-scaled.jpg',
+            src: '/ito_gallery/Ito-photo27.JPG',
             title: 'Photo 27',
             category: 'Photography'
         },
         {
             id: 28,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo28-scaled.jpg',
+            src: '/ito_gallery/Ito-photo28.JPG',
             title: 'Photo 28',
             category: 'Photography'
         },
         {
             id: 29,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo29-scaled.jpg',
+            src: '/ito_gallery/Ito-photo29.JPG',
             title: 'Photo 29',
             category: 'Photography'
         },
         {
             id: 30,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg',
+            src: '/ito_gallery/Ito-photo30.JPG',
             title: 'Photo 30',
             category: 'Photography'
         },
         {
             id: 31,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo31-scaled.jpg',
+            src: '/ito_gallery/Ito-photo31.JPG',
             title: 'Photo 31',
             category: 'Photography'
         },
         {
             id: 32,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo32-scaled.jpg',
+            src: '/ito_gallery/Ito-photo32.JPG',
             title: 'Photo 32',
             category: 'Photography'
         },
         {
             id: 33,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo33-scaled.jpg',
+            src: '/ito_gallery/Ito-photo33.JPG',
             title: 'Photo 33',
             category: 'Photography'
         },
         {
             id: 34,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg',
+            src: '/ito_gallery/Ito-photo34.JPG',
             title: 'Photo 34',
             category: 'Photography'
         },
         {
             id: 35,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo35-scaled.jpg',
+            src: '/ito_gallery/Ito-photo35.JPG',
             title: 'Photo 35',
             category: 'Photography'
         },
         {
             id: 36,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo36-scaled.jpg',
+            src: '/ito_gallery/Ito-photo36.JPG',
             title: 'Photo 36',
             category: 'Photography'
         },
         {
             id: 37,
-            src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg',
+            src: '/ito_gallery/Ito-photo37.JPG',
             title: 'Photo 37',
             category: 'Photography'
         }
@@ -3464,10 +3464,14 @@ const Gallery = ()=>{
                 onClick: closeModal,
                 onTouchStart: handleTouchStart,
                 onTouchEnd: handleTouchEnd,
+                role: "dialog",
+                "aria-modal": "true",
+                "aria-label": "ギャラリー画像ビューアー",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         className: "absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-[var(--color-paper)]/70 hover:text-[var(--color-paper)] hover:rotate-90 transition-all duration-300 z-10",
                         onClick: closeModal,
+                        "aria-label": "閉じる",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                             className: "w-8 h-8",
                             fill: "none",
@@ -3480,17 +3484,17 @@ const Gallery = ()=>{
                                 d: "M6 18L18 6M6 6l12 12"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 259,
+                                lineNumber: 263,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 258,
+                            lineNumber: 262,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 254,
+                        lineNumber: 257,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3501,7 +3505,7 @@ const Gallery = ()=>{
                                 children: selectedImage + 1
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 265,
+                                lineNumber: 269,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3509,20 +3513,20 @@ const Gallery = ()=>{
                                 children: "/"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 266,
+                                lineNumber: 270,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: shuffledImages.length
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 267,
+                                lineNumber: 271,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 264,
+                        lineNumber: 268,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3542,12 +3546,12 @@ const Gallery = ()=>{
                                     draggable: false
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Gallery.tsx",
-                                    lineNumber: 279,
+                                    lineNumber: 283,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 277,
+                                lineNumber: 281,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3557,18 +3561,18 @@ const Gallery = ()=>{
                                     children: "© 無断転載禁止 - All Rights Reserved"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Gallery.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 293,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 288,
+                                lineNumber: 292,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 271,
+                        lineNumber: 275,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3577,6 +3581,7 @@ const Gallery = ()=>{
                             e.stopPropagation();
                             navigateImage(-1);
                         },
+                        "aria-label": "前の画像",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                             className: "w-5 h-5",
                             fill: "none",
@@ -3589,17 +3594,17 @@ const Gallery = ()=>{
                                 d: "M15 19l-7-7 7-7"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 304,
+                                lineNumber: 309,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 303,
+                            lineNumber: 308,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 296,
+                        lineNumber: 300,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3608,6 +3613,7 @@ const Gallery = ()=>{
                             e.stopPropagation();
                             navigateImage(1);
                         },
+                        "aria-label": "次の画像",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                             className: "w-5 h-5",
                             fill: "none",
@@ -3620,17 +3626,17 @@ const Gallery = ()=>{
                                 d: "M9 5l7 7-7 7"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 315,
+                                lineNumber: 321,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/components/Gallery.tsx",
-                            lineNumber: 314,
+                            lineNumber: 320,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 307,
+                        lineNumber: 312,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3643,12 +3649,12 @@ const Gallery = ()=>{
                                 className: `w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0 ${index === selectedImage ? 'bg-[var(--color-gold)] w-6' : img.src ? 'bg-[var(--color-paper)]/30 hover:bg-[var(--color-paper)]/50' : 'bg-[var(--color-paper)]/10'}`
                             }, index, false, {
                                 fileName: "[project]/app/components/Gallery.tsx",
-                                lineNumber: 322,
+                                lineNumber: 328,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 320,
+                        lineNumber: 326,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3656,7 +3662,7 @@ const Gallery = ()=>{
                         children: "スワイプで移動"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Gallery.tsx",
-                        lineNumber: 340,
+                        lineNumber: 346,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -4333,21 +4339,42 @@ const Contact = ()=>{
             })["Contact.useEffect"];
         }
     }["Contact.useEffect"], []);
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
         setIsSubmitting(true);
-        setTimeout(()=>{
-            setIsSubmitting(false);
-            setIsSubmitted(true);
-            setFormState({
-                name: '',
-                email: '',
-                phone: '',
-                type: '',
-                message: ''
+        try {
+            // Formspree を使用してメール送信
+            const response = await fetch('https://formspree.io/f/xpwzgkqr', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formState.name,
+                    email: formState.email,
+                    phone: formState.phone,
+                    type: formState.type,
+                    message: formState.message
+                })
             });
-            setTimeout(()=>setIsSubmitted(false), 5000);
-        }, 1500);
+            if (response.ok) {
+                setIsSubmitted(true);
+                setFormState({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    type: '',
+                    message: ''
+                });
+                setTimeout(()=>setIsSubmitted(false), 5000);
+            } else {
+                alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。');
+            }
+        } catch  {
+            alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。');
+        } finally{
+            setIsSubmitting(false);
+        }
     };
     const clinicInfo = {
         name: 'ライラック治療院 生麦',
@@ -4372,12 +4399,12 @@ const Contact = ()=>{
                     d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 66,
+                    lineNumber: 89,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 65,
+                lineNumber: 88,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -4393,12 +4420,12 @@ const Contact = ()=>{
                     d: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 76,
+                    lineNumber: 99,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 75,
+                lineNumber: 98,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -4414,12 +4441,12 @@ const Contact = ()=>{
                     d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 86,
+                    lineNumber: 109,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 85,
+                lineNumber: 108,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -4435,12 +4462,12 @@ const Contact = ()=>{
                     d: "M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.187.408-2.281 1.333-3.08.853-.737 2.063-1.17 3.504-1.252 1.048-.06 2.015.043 2.881.308-.088-1.013-.471-1.773-1.148-2.273-.775-.572-1.932-.861-3.443-.861h-.016c-1.228.007-2.214.28-2.93.813l-1.132-1.71c1.081-.804 2.523-1.218 4.287-1.233h.023c1.973 0 3.54.467 4.658 1.388.94.773 1.548 1.86 1.816 3.238.746.324 1.412.744 1.98 1.253 1.056.945 1.67 2.181 1.823 3.676.186 1.818-.28 3.703-1.348 5.46-1.2 1.974-3.088 3.469-5.618 4.446-1.476.57-3.094.859-4.812.859z"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 96,
+                    lineNumber: 119,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 95,
+                lineNumber: 118,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -4462,7 +4489,7 @@ const Contact = ()=>{
                     className: "peer w-full px-4 pt-6 pb-2 bg-[var(--color-white)] border border-[var(--color-ink)]/10 text-[var(--color-ink)]  focus:border-[var(--color-gold)] focus:outline-none transition-all duration-300 focus:shadow-[0_0_0_3px_rgba(201,169,98,0.1)]"
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 119,
+                    lineNumber: 142,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -4479,26 +4506,26 @@ const Contact = ()=>{
                             children: "*"
                         }, void 0, false, {
                             fileName: "[project]/app/components/Contact.tsx",
-                            lineNumber: 146,
+                            lineNumber: 169,
                             columnNumber: 30
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 133,
+                    lineNumber: 156,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: `absolute bottom-0 left-0 h-[2px] bg-[var(--color-gold)] transition-all duration-300 ${focusedField === name ? 'w-full' : 'w-0'}`
                 }, void 0, false, {
                     fileName: "[project]/app/components/Contact.tsx",
-                    lineNumber: 149,
+                    lineNumber: 172,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/components/Contact.tsx",
-            lineNumber: 118,
+            lineNumber: 141,
             columnNumber: 5
         }, ("TURBOPACK compile-time value", void 0));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -4510,7 +4537,7 @@ const Contact = ()=>{
                 className: "absolute top-20 right-10 w-64 h-64 rounded-full border border-[var(--color-gold)]/10 animate-floating-slow"
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 162,
+                lineNumber: 185,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4520,7 +4547,7 @@ const Contact = ()=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 163,
+                lineNumber: 186,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4536,7 +4563,7 @@ const Contact = ()=>{
                                         className: "gold-line"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 196,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4544,20 +4571,20 @@ const Contact = ()=>{
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 174,
+                                        lineNumber: 197,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "gold-line"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 198,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Contact.tsx",
-                                lineNumber: 172,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4565,7 +4592,7 @@ const Contact = ()=>{
                                 children: "お問い合わせ"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Contact.tsx",
-                                lineNumber: 177,
+                                lineNumber: 200,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4576,20 +4603,20 @@ const Contact = ()=>{
                                         className: "hidden md:block"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 202,
                                         columnNumber: 36
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     "合宿帯同などで不在の場合がありますので、事前のご予約をお願いします。"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Contact.tsx",
-                                lineNumber: 178,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Contact.tsx",
-                        lineNumber: 167,
+                        lineNumber: 190,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4615,30 +4642,30 @@ const Contact = ()=>{
                                                         d: "M5 13l4 4L19 7"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 196,
+                                                        lineNumber: 219,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                    lineNumber: 195,
+                                                    lineNumber: 218,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                    lineNumber: 198,
+                                                    lineNumber: 221,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/Contact.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 217,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 216,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -4659,7 +4686,7 @@ const Contact = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 228,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FormField, {
@@ -4674,13 +4701,13 @@ const Contact = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 212,
+                                                        lineNumber: 235,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 227,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4697,7 +4724,7 @@ const Contact = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 223,
+                                                        lineNumber: 246,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4720,7 +4747,7 @@ const Contact = ()=>{
                                                                         value: ""
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 243,
+                                                                        lineNumber: 266,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4728,7 +4755,7 @@ const Contact = ()=>{
                                                                         children: "施術予約"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 244,
+                                                                        lineNumber: 267,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4736,7 +4763,7 @@ const Contact = ()=>{
                                                                         children: "ご相談"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 245,
+                                                                        lineNumber: 268,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4744,7 +4771,7 @@ const Contact = ()=>{
                                                                         children: "チームサポート依頼"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 246,
+                                                                        lineNumber: 269,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4752,13 +4779,13 @@ const Contact = ()=>{
                                                                         children: "その他"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 247,
+                                                                        lineNumber: 270,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 231,
+                                                                lineNumber: 254,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -4774,13 +4801,13 @@ const Contact = ()=>{
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 262,
+                                                                        lineNumber: 285,
                                                                         columnNumber: 30
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 249,
+                                                                lineNumber: 272,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -4795,31 +4822,31 @@ const Contact = ()=>{
                                                                     d: "M19 9l-7 7-7-7"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 266,
+                                                                    lineNumber: 289,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 265,
+                                                                lineNumber: 288,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 className: `absolute bottom-0 left-0 h-[2px] bg-[var(--color-gold)] transition-all duration-300 ${focusedField === 'type' ? 'w-full' : 'w-0'}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 291,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 230,
+                                                        lineNumber: 253,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 245,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4841,7 +4868,7 @@ const Contact = ()=>{
                                                         className: "peer w-full px-4 pt-6 pb-2 bg-[var(--color-white)] border border-[var(--color-ink)]/10 text-[var(--color-ink)]  focus:border-[var(--color-gold)] focus:outline-none transition-all duration-300 resize-none focus:shadow-[0_0_0_3px_rgba(201,169,98,0.1)]"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 275,
+                                                        lineNumber: 298,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -4857,26 +4884,26 @@ const Contact = ()=>{
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 302,
+                                                                lineNumber: 325,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 289,
+                                                        lineNumber: 312,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: `absolute bottom-0 left-0 h-[2px] bg-[var(--color-gold)] transition-all duration-300 ${focusedField === 'message' ? 'w-full' : 'w-0'}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 304,
+                                                        lineNumber: 327,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 297,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4888,14 +4915,14 @@ const Contact = ()=>{
                                                         className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 315,
+                                                        lineNumber: 338,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "absolute inset-0 bg-[var(--color-gold)] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 318,
+                                                        lineNumber: 341,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4916,7 +4943,7 @@ const Contact = ()=>{
                                                                             strokeWidth: "4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                                            lineNumber: 324,
+                                                                            lineNumber: 347,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -4925,20 +4952,20 @@ const Contact = ()=>{
                                                                             d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                                            lineNumber: 325,
+                                                                            lineNumber: 348,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 323,
+                                                                    lineNumber: 346,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "送信中..."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 327,
+                                                                    lineNumber: 350,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
@@ -4948,7 +4975,7 @@ const Contact = ()=>{
                                                                     children: "送信する"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 331,
+                                                                    lineNumber: 354,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -4963,31 +4990,31 @@ const Contact = ()=>{
                                                                         d: "M14 5l7 7m0 0l-7 7m7-7H3"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 333,
+                                                                        lineNumber: 356,
                                                                         columnNumber: 25
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 332,
+                                                                    lineNumber: 355,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 320,
+                                                        lineNumber: 343,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 309,
+                                                lineNumber: 332,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4998,7 +5025,7 @@ const Contact = ()=>{
                                                 children: "SNS"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 343,
+                                                lineNumber: 366,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5012,24 +5039,24 @@ const Contact = ()=>{
                                                         children: social.icon
                                                     }, social.name, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 346,
+                                                        lineNumber: 369,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 344,
+                                                lineNumber: 367,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 342,
+                                        lineNumber: 365,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Contact.tsx",
-                                lineNumber: 186,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5039,7 +5066,7 @@ const Contact = ()=>{
                                         className: "aspect-[4/3] mb-6 relative overflow-hidden group",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                                src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.6123456789!2d139.67!3d35.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z56We5aWI5bed55yM5qiq5rWc5biC6ba055Sf5Yy655Sf6bq7My04LTc!5e0!3m2!1sja!2sjp!4v1234567890",
+                                                src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.8!2d139.6758!3d35.4978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185dd6c3c6f8d7%3A0x8f8f8f8f8f8f8f8f!2z44Op44Kk44Op44OD44Kv5rK755mC6Zmi!5e0!3m2!1sja!2sjp!4v1701580800000",
                                                 width: "100%",
                                                 height: "100%",
                                                 style: {
@@ -5048,23 +5075,24 @@ const Contact = ()=>{
                                                 allowFullScreen: true,
                                                 loading: "lazy",
                                                 referrerPolicy: "no-referrer-when-downgrade",
-                                                className: "grayscale group-hover:grayscale-0 transition-all duration-700"
+                                                className: "grayscale group-hover:grayscale-0 transition-all duration-700",
+                                                title: "ライラック治療院 生麦の地図"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 369,
+                                                lineNumber: 392,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 380,
+                                                lineNumber: 404,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 368,
+                                        lineNumber: 391,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5082,12 +5110,12 @@ const Contact = ()=>{
                                                             className: "object-contain p-1"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 388,
+                                                            lineNumber: 412,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 387,
+                                                        lineNumber: 411,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5097,7 +5125,7 @@ const Contact = ()=>{
                                                                 children: clinicInfo.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 396,
+                                                                lineNumber: 420,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5105,19 +5133,19 @@ const Contact = ()=>{
                                                                 children: "Lilac Clinic Namamugi"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 397,
+                                                                lineNumber: 421,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 395,
+                                                        lineNumber: 419,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 386,
+                                                lineNumber: 410,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5139,7 +5167,7 @@ const Contact = ()=>{
                                                                     d: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 406,
+                                                                    lineNumber: 430,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -5149,13 +5177,13 @@ const Contact = ()=>{
                                                                     d: "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 407,
+                                                                    lineNumber: 431,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 405,
+                                                            lineNumber: 429,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     },
@@ -5176,12 +5204,12 @@ const Contact = ()=>{
                                                                 d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 412,
+                                                                lineNumber: 436,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 411,
+                                                            lineNumber: 435,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     },
@@ -5200,12 +5228,12 @@ const Contact = ()=>{
                                                                 d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 417,
+                                                                lineNumber: 441,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 416,
+                                                            lineNumber: 440,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     },
@@ -5224,12 +5252,12 @@ const Contact = ()=>{
                                                                 d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 422,
+                                                                lineNumber: 446,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 421,
+                                                            lineNumber: 445,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }
@@ -5241,7 +5269,7 @@ const Contact = ()=>{
                                                                 children: item.icon
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 427,
+                                                                lineNumber: 451,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5252,7 +5280,7 @@ const Contact = ()=>{
                                                                         children: item.label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 429,
+                                                                        lineNumber: 453,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5264,14 +5292,14 @@ const Contact = ()=>{
                                                                                 children: item.value
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                                lineNumber: 432,
+                                                                                lineNumber: 456,
                                                                                 columnNumber: 27
                                                                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                 className: "text-[var(--color-ink)]",
                                                                                 children: item.value
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                                lineNumber: 436,
+                                                                                lineNumber: 460,
                                                                                 columnNumber: 27
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             item.badge && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5279,30 +5307,30 @@ const Contact = ()=>{
                                                                                 children: item.badge
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                                lineNumber: 439,
+                                                                                lineNumber: 463,
                                                                                 columnNumber: 27
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 430,
+                                                                        lineNumber: 454,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 428,
+                                                                lineNumber: 452,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 426,
+                                                        lineNumber: 450,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 402,
+                                                lineNumber: 426,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5318,7 +5346,7 @@ const Contact = ()=>{
                                                                 children: "公式サイト"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 457,
+                                                                lineNumber: 481,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -5333,18 +5361,18 @@ const Contact = ()=>{
                                                                     d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 459,
+                                                                    lineNumber: 483,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 458,
+                                                                lineNumber: 482,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 451,
+                                                        lineNumber: 475,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -5357,7 +5385,7 @@ const Contact = ()=>{
                                                                 children: "Instagram"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 468,
+                                                                lineNumber: 492,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -5372,24 +5400,24 @@ const Contact = ()=>{
                                                                     d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 470,
+                                                                    lineNumber: 494,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 469,
+                                                                lineNumber: 493,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 462,
+                                                        lineNumber: 486,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 450,
+                                                lineNumber: 474,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -5400,7 +5428,7 @@ const Contact = ()=>{
                                                         className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 481,
+                                                        lineNumber: 505,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -5415,12 +5443,12 @@ const Contact = ()=>{
                                                             d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/Contact.tsx",
-                                                            lineNumber: 483,
+                                                            lineNumber: 507,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 482,
+                                                        lineNumber: 506,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5428,43 +5456,43 @@ const Contact = ()=>{
                                                         children: "電話で予約"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 485,
+                                                        lineNumber: 509,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 476,
+                                                lineNumber: 500,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Contact.tsx",
-                                        lineNumber: 384,
+                                        lineNumber: 408,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Contact.tsx",
-                                lineNumber: 362,
+                                lineNumber: 385,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Contact.tsx",
-                        lineNumber: 184,
+                        lineNumber: 207,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Contact.tsx",
-                lineNumber: 165,
+                lineNumber: 188,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/Contact.tsx",
-        lineNumber: 156,
+        lineNumber: 179,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

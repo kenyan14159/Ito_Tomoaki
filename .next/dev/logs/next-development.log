@@ -1,7 +1,7 @@
-[00:00:00.666] Server  LOG      ✓ Ready in 414ms
-[00:00:02.656] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:03.024] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.558] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.674] Server  LOG      ✓ Ready in 433ms
+[00:00:02.521] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:03.226] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.531] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -31,16 +31,49 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="ja"
--                         data-redeviation-bs-uid="opj7wdsfjm"
+-                         data-redeviation-bs-uid="0bwnj7ktrukq"
                         >
                           ...
                             <div className="grid grid-...">
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo17-scaled.jpg"
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo16-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg"
++                                   alt="Photo 16"
+-                                   alt="Photo 37"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg"
++                                   alt="Photo 14"
+-                                   alt="Photo 30"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo35-scaled.jpg"
++                                   alt="Photo 7"
+-                                   alt="Photo 35"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo25-scaled.jpg"
 -                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo9-scaled.jpg"
-+                                   alt="Photo 17"
++                                   alt="Photo 25"
 -                                   alt="Photo 9"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
@@ -49,8 +82,373 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo32-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo21-scaled.jpg"
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo18-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo22-scaled.jpg"
++                                   alt="Photo 18"
+-                                   alt="Photo 22"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg"
++                                   alt="Photo 12"
+-                                   alt="Photo 1"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo19-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo3-scaled.jpg"
++                                   alt="Photo 19"
+-                                   alt="Photo 3"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo29-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg"
++                                   alt="Photo 29"
+-                                   alt="Photo 13"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo17-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg"
++                                   alt="Photo 17"
+-                                   alt="Photo 6"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo26-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg"
++                                   alt="Photo 26"
+-                                   alt="Photo 34"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo28-scaled.jpg"
++                                   alt="Photo 30"
+-                                   alt="Photo 28"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo2-scaled.jpg"
+-                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg"
++                                   alt="Photo 2"
+-                                   alt="Photo 14"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                  ...
+
+[00:02:32.898] Server  LOG      ✓ Compiled in 2.1s
+[00:03:12.672] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:03:13.193] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:13.361] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="ja"
+-                         data-redeviation-bs-uid="6irh6ztesnd"
+                        >
+                          ...
+                            <div className="grid grid-...">
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo14.JPG"
+-                                   src="/ito_gallery/Ito-photo34.JPG"
++                                   alt="Photo 14"
+-                                   alt="Photo 34"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo30.JPG"
+-                                   src="/ito_gallery/Ito-photo10.JPG"
++                                   alt="Photo 30"
+-                                   alt="Photo 10"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo34.JPG"
+-                                   src="/ito_gallery/Ito-photo2.JPG"
++                                   alt="Photo 34"
+-                                   alt="Photo 2"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo37.JPG"
+-                                   src="/ito_gallery/Ito-photo9.JPG"
++                                   alt="Photo 37"
+-                                   alt="Photo 9"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo2.JPG"
+-                                   src="/ito_gallery/Ito-photo16.JPG"
++                                   alt="Photo 2"
+-                                   alt="Photo 16"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo24.JPG"
+-                                   src="/ito_gallery/Ito-photo4.JPG"
++                                   alt="Photo 24"
+-                                   alt="Photo 4"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo17.JPG"
+-                                   src="/ito_gallery/Ito-photo18.JPG"
++                                   alt="Photo 17"
+-                                   alt="Photo 18"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div>
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo4.JPG"
+-                                   src="/ito_gallery/Ito-photo24.JPG"
++                                   alt="Photo 4"
+-                                   alt="Photo 24"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo28.JPG"
+-                                   src="/ito_gallery/Ito-photo23.JPG"
++                                   alt="Photo 28"
+-                                   alt="Photo 23"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo21.JPG"
+-                                   src="/ito_gallery/Ito-photo12.JPG"
++                                   alt="Photo 21"
+-                                   alt="Photo 12"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo31.JPG"
+-                                   src="/ito_gallery/Ito-photo28.JPG"
++                                   alt="Photo 31"
+-                                   alt="Photo 28"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                  ...
+
+[00:06:31.596] Server  LOG      ✓ Compiled in 66ms
+[00:06:57.671] Server  LOG      ✓ Compiled in 56ms
+[00:07:10.313] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:07:33.985] Server  LOG      ✓ Compiled in 70ms
+[00:08:07.135] Server  LOG      ✓ Compiled in 87ms
+[00:09:16.197] Server  LOG      ✓ Compiled in 29ms
+[00:09:34.835] Server  LOG      ✓ Compiled in 117ms
+[00:10:08.298] Server  LOG      ✓ Compiled in 27ms
+[00:10:08.529] Browser ERROR   uncaughtError: ReferenceError: socialLinks is not defined
+[00:10:27.381] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:10:27.480] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:10:27.482] Server  LOG      ✓ Compiled in 29ms
+[00:10:27.670] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:10:28.156] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:28.531] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="ja"
+-                         data-redeviation-bs-uid="sq1cn2nllcj"
+                        >
+                          ...
+                            <div className="grid grid-...">
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo36.JPG"
+-                                   src="/ito_gallery/Ito-photo35.JPG"
++                                   alt="Photo 36"
+-                                   alt="Photo 35"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo27.JPG"
+-                                   src="/ito_gallery/Ito-photo34.JPG"
++                                   alt="Photo 27"
+-                                   alt="Photo 34"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo18.JPG"
+-                                   src="/ito_gallery/Ito-photo27.JPG"
++                                   alt="Photo 18"
+-                                   alt="Photo 27"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo11.JPG"
+-                                   src="/ito_gallery/Ito-photo15.JPG"
++                                   alt="Photo 11"
+-                                   alt="Photo 15"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo19.JPG"
+-                                   src="/ito_gallery/Ito-photo14.JPG"
++                                   alt="Photo 19"
+-                                   alt="Photo 14"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo1.JPG"
+-                                   src="/ito_gallery/Ito-photo8.JPG"
++                                   alt="Photo 1"
+-                                   alt="Photo 8"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo32.JPG"
+-                                   src="/ito_gallery/Ito-photo21.JPG"
 +                                   alt="Photo 32"
 -                                   alt="Photo 21"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
@@ -60,9 +458,161 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo5-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo25-scaled.jpg"
++                                   src="/ito_gallery/Ito-photo7.JPG"
+-                                   src="/ito_gallery/Ito-photo5.JPG"
++                                   alt="Photo 7"
+-                                   alt="Photo 5"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo17.JPG"
+-                                   src="/ito_gallery/Ito-photo1.JPG"
++                                   alt="Photo 17"
+-                                   alt="Photo 1"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo15.JPG"
+-                                   src="/ito_gallery/Ito-photo16.JPG"
++                                   alt="Photo 15"
+-                                   alt="Photo 16"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo34.JPG"
+-                                   src="/ito_gallery/Ito-photo12.JPG"
++                                   alt="Photo 34"
+-                                   alt="Photo 12"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo10.JPG"
+-                                   src="/ito_gallery/Ito-photo7.JPG"
++                                   alt="Photo 10"
+-                                   alt="Photo 7"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                  ...
+
+[00:11:33.054] Server  LOG      ✓ Compiled in 228ms
+[00:11:33.531] Browser ERROR   uncaughtError: ReferenceError: socialLinks is not defined
+[00:11:52.538] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:52.630] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3003". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:11:52.633] Server  LOG      ✓ Compiled in 24ms
+[00:11:53.363] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:53.532] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="ja"
+-                         data-redeviation-bs-uid="srjv3fzmv4"
+                        >
+                          ...
+                            <div className="grid grid-...">
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo36.JPG"
+-                                   src="/ito_gallery/Ito-photo26.JPG"
++                                   alt="Photo 36"
+-                                   alt="Photo 26"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo21.JPG"
+-                                   src="/ito_gallery/Ito-photo22.JPG"
++                                   alt="Photo 21"
+-                                   alt="Photo 22"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo26.JPG"
+-                                   src="/ito_gallery/Ito-photo30.JPG"
++                                   alt="Photo 26"
+-                                   alt="Photo 30"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo5.JPG"
+-                                   src="/ito_gallery/Ito-photo3.JPG"
 +                                   alt="Photo 5"
+-                                   alt="Photo 3"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo34.JPG"
+-                                   src="/ito_gallery/Ito-photo13.JPG"
++                                   alt="Photo 34"
+-                                   alt="Photo 13"
+                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
+                                    draggable={false}
+                                  >
+                                  ...
+                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
+                                <div className="relative a...">
+                                  <img
++                                   src="/ito_gallery/Ito-photo6.JPG"
+-                                   src="/ito_gallery/Ito-photo25.JPG"
++                                   alt="Photo 6"
 -                                   alt="Photo 25"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
@@ -71,10 +621,10 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo35-scaled.jpg"
-+                                   alt="Photo 34"
--                                   alt="Photo 35"
++                                   src="/ito_gallery/Ito-photo19.JPG"
+-                                   src="/ito_gallery/Ito-photo20.JPG"
++                                   alt="Photo 19"
+-                                   alt="Photo 20"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
                                   >
@@ -82,10 +632,10 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo16-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo15-scaled.jpg"
-+                                   alt="Photo 16"
--                                   alt="Photo 15"
++                                   src="/ito_gallery/Ito-photo3.JPG"
+-                                   src="/ito_gallery/Ito-photo33.JPG"
++                                   alt="Photo 3"
+-                                   alt="Photo 33"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
                                   >
@@ -93,32 +643,10 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo11-scaled.jpg"
-+                                   alt="Photo 12"
--                                   alt="Photo 11"
-                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
-                                    draggable={false}
-                                  >
-                                  ...
-                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
-                                <div className="relative a...">
-                                  <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo21-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo29-scaled.jpg"
-+                                   alt="Photo 21"
--                                   alt="Photo 29"
-                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
-                                    draggable={false}
-                                  >
-                                  ...
-                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
-                                <div className="relative a...">
-                                  <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo19-scaled.jpg"
-+                                   alt="Photo 1"
--                                   alt="Photo 19"
++                                   src="/ito_gallery/Ito-photo17.JPG"
+-                                   src="/ito_gallery/Ito-photo2.JPG"
++                                   alt="Photo 17"
+-                                   alt="Photo 2"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
                                   >
@@ -127,10 +655,10 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg"
-+                                   alt="Photo 37"
--                                   alt="Photo 34"
++                                   src="/ito_gallery/Ito-photo31.JPG"
+-                                   src="/ito_gallery/Ito-photo6.JPG"
++                                   alt="Photo 31"
+-                                   alt="Photo 6"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
                                   >
@@ -138,21 +666,10 @@ It can also happen if the client has a browser extension installed which messes 
                               <div className="group curs..." style={{...}} onClick={function onClick} ...>
                                 <div className="relative a...">
                                   <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo8-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg"
-+                                   alt="Photo 8"
++                                   src="/ito_gallery/Ito-photo16.JPG"
+-                                   src="/ito_gallery/Ito-photo14.JPG"
++                                   alt="Photo 16"
 -                                   alt="Photo 14"
-                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
-                                    draggable={false}
-                                  >
-                                  ...
-                              <div className="group curs..." style={{...}} onClick={function onClick} ...>
-                                <div className="relative a...">
-                                  <img
-+                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo33-scaled.jpg"
--                                   src="https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg"
-+                                   alt="Photo 33"
--                                   alt="Photo 7"
                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700..."
                                     draggable={false}
                                   >

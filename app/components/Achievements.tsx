@@ -92,7 +92,7 @@ const Achievements = () => {
                 <div className="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-2 border-[var(--color-gold)]/30 transition-all duration-500 group-hover:border-[var(--color-gold)]/60">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://wprs.my-hobby.space/wp-content/uploads/2025/10/nssu.jpg"
+                    src="/nssu.jpg"
                     alt="日本体育大学"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />

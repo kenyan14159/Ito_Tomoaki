@@ -1,9 +1,42 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
+import { TREATMENT_DATA } from '../constants/treatments';
 
-const Treatment = () => {
+// アイコンコンポーネントをコンポーネント外部で定義
+const TreatmentIcons: Record<string, React.ReactNode> = {
+  acupuncture: (
+    <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
+      <line x1="24" y1="4" x2="24" y2="44" />
+      <circle cx="24" cy="8" r="3" />
+      <path d="M20 16 L28 16" />
+      <path d="M18 24 L30 24" />
+      <path d="M20 32 L28 32" />
+    </svg>
+  ),
+  moxibustion: (
+    <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
+      <path d="M24 40 C16 40 12 32 12 24 C12 16 18 8 24 4 C30 8 36 16 36 24 C36 32 32 40 24 40Z" />
+      <path d="M20 28 Q24 20 28 28" strokeWidth="1.5" />
+      <circle cx="24" cy="24" r="2" fill="currentColor" />
+    </svg>
+  ),
+  electro: (
+    <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
+      <path d="M28 4 L18 22 L26 22 L20 44 L30 26 L22 26 L28 4Z" strokeLinejoin="round" />
+    </svg>
+  ),
+  cupping: (
+    <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
+      <path d="M12 32 Q12 16 24 12 Q36 16 36 32" strokeWidth="1.5" />
+      <ellipse cx="24" cy="32" rx="12" ry="4" />
+      <path d="M16 28 Q24 24 32 28" strokeDasharray="2 2" />
+    </svg>
+  ),
+};
+
+const TreatmentComponent = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -26,72 +59,13 @@ const Treatment = () => {
     return () => observer.disconnect();
   }, []);
 
-  const treatments = [
-    {
-      id: 'acupuncture',
-      title: '鍼治療',
-      titleEn: 'Acupuncture',
-      image: '/haritiryo.png',
-      icon: (
-        <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
-          <line x1="24" y1="4" x2="24" y2="44" />
-          <circle cx="24" cy="8" r="3" />
-          <path d="M20 16 L28 16" />
-          <path d="M18 24 L30 24" />
-          <path d="M20 32 L28 32" />
-        </svg>
-      ),
-      description: '極細の鍼を使用し、筋肉の深部にアプローチ。血流改善、筋緊張の緩和、自然治癒力の活性化を促します。',
-      benefits: ['筋肉の緊張緩和', '血流促進', '自律神経調整', '疲労回復促進'],
-      detail: 'スポーツ選手の場合、競技特性に応じた部位への施術を行い、パフォーマンス向上と怪我の予防をサポート。一般の方には、肩こり・腰痛などの慢性症状の改善に効果的です。',
-    },
-    {
-      id: 'moxibustion',
-      title: 'お灸',
-      titleEn: 'Moxibustion',
-      image: '/okyu.png',
-      icon: (
-        <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
-          <path d="M24 40 C16 40 12 32 12 24 C12 16 18 8 24 4 C30 8 36 16 36 24 C36 32 32 40 24 40Z" />
-          <path d="M20 28 Q24 20 28 28" strokeWidth="1.5" />
-          <circle cx="24" cy="24" r="2" fill="currentColor" />
-        </svg>
-      ),
-      description: 'もぐさを燃焼させた温熱刺激により、冷えの改善、免疫力向上、リラクゼーション効果をもたらします。',
-      benefits: ['冷え性改善', '免疫力向上', 'リラックス効果', '代謝促進'],
-      detail: '直接灸、間接灸、温灸など、症状や体質に合わせて最適な方法を選択。温熱効果で深部まで温め、慢性的な不調を根本から改善します。',
-    },
-    {
-      id: 'electro',
-      title: '電気治療',
-      titleEn: 'Electrotherapy',
-      image: '/denki.png',
-      icon: (
-        <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
-          <path d="M28 4 L18 22 L26 22 L20 44 L30 26 L22 26 L28 4Z" strokeLinejoin="round" />
-        </svg>
-      ),
-      description: '低周波・中周波電気刺激により、筋肉の収縮を促し、痛みの軽減と機能回復をサポートします。',
-      benefits: ['痛み軽減', '筋力強化', '炎症抑制', '回復促進'],
-      detail: '鍼通電療法（パルス治療）を中心に、怪我の急性期から慢性期まで幅広く対応。EMSによる筋トレ効果も期待できます。',
-    },
-    {
-      id: 'cupping',
-      title: 'カッピング',
-      titleEn: 'Cupping',
-      image: '/kappingu.png',
-      icon: (
-        <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1">
-          <path d="M12 32 Q12 16 24 12 Q36 16 36 32" strokeWidth="1.5" />
-          <ellipse cx="24" cy="32" rx="12" ry="4" />
-          <path d="M16 28 Q24 24 32 28" strokeDasharray="2 2" />
-        </svg>
-      ),
-      description: '吸引カップで皮膚を吸い上げ、血流を促進。深部組織のコリや老廃物の排出を促します。',
-      benefits: ['血行促進', '筋膜リリース', 'デトックス効果', '可動域改善'],
-      detail: '古来からの伝統療法を現代的にアレンジ。アスリートのリカバリーに特に効果的で、練習後の疲労回復に多くの選手が利用しています。',
-    },
-  ];
+  // 定数データにアイコンを追加
+  const treatments = useMemo(() => 
+    TREATMENT_DATA.map((treatment) => ({
+      ...treatment,
+      icon: TreatmentIcons[treatment.id],
+    })), 
+  []);
 
   return (
     <section
@@ -299,4 +273,4 @@ const Treatment = () => {
   );
 };
 
-export default Treatment;
+export default TreatmentComponent;

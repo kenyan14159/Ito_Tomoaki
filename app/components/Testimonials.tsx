@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { TESTIMONIALS } from '../constants/testimonials';
 
 const Testimonials = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,41 +10,6 @@ const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
   const progressInterval = useRef<NodeJS.Timeout | null>(null);
-
-  const testimonials = [
-    {
-      id: 1,
-      name: 'R.H.',
-      role: '日本体育大学 男子駅伝ブロック',
-      record: '2025 箱根駅伝 1区 区間3位',
-      quote: 'レース前の緊張や不安で眠れない日が続いていた時期、伊藤先生には身体のケアだけでなく、悩み相談にも親身に乗っていただきました。施術中にいろいろな話を聞いてもらえることで、精神的にもすごく楽になり、競技に集中できるようになりました。先生のおかげで自分らしい走りができ、区間3位という結果を残せたと思っています。',
-      highlight: '区間3位',
-    },
-    {
-      id: 2,
-      name: 'W.T.',
-      role: '日本体育大学 男子駅伝ブロック',
-      record: '2024 箱根駅伝 8区 区間2位',
-      quote: '以前は毎シーズンのように故障を繰り返していましたが、伊藤先生に治療だけでなく、怪我予防のためのトレーニングや身体の使い方を教えていただいてから、ほとんど怪我をしなくなりました。継続的に練習を積めるようになったことで、箱根駅伝でも区間2位という自己最高の結果を出すことができました。',
-      highlight: '区間2位',
-    },
-    {
-      id: 3,
-      name: 'S.H.',
-      role: '日本体育大学 男子駅伝ブロック',
-      record: '2025 箱根駅伝 10区 区間12位',
-      quote: '長い間原因不明の脚の痛みに悩まされていましたが、伊藤先生は身体全体を診て根本的な原因を特定してくださいました。実は股関節の動きが悪いことが原因だとわかり、的確なアドバイスと治療のおかげで完治。先生は「なぜ痛くなるのか」を丁寧に説明してくれるので、自分の身体への理解も深まりました。',
-      highlight: '完治',
-    },
-    {
-      id: 4,
-      name: 'Y.T.',
-      role: '日本体育大学 男子駅伝ブロック',
-      record: '2023 箱根駅伝 1区 区間9位',
-      quote: '箱根駅伝の直前、調整がうまくいかず不安を抱えていましたが、伊藤先生がレース前日までコンディショニングを行ってくださり、ベストな状態でスタートラインに立てました。試合直前でも対応していただける安心感は大きく、先生のサポートがあったからこそ結果につながったと確信しています。',
-      highlight: '区間9位',
-    },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -93,9 +59,9 @@ const Testimonials = () => {
   // Auto-advance when progress completes
   useEffect(() => {
     if (progress >= 100) {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+      setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
     }
-  }, [progress, testimonials.length]);
+  }, [progress, TESTIMONIALS.length]);
 
   const goToSlide = (index: number) => {
     setActiveIndex(index);
@@ -163,7 +129,7 @@ const Testimonials = () => {
 
             {/* Testimonial Cards */}
             <div className="relative min-h-[450px] md:min-h-[380px]">
-              {testimonials.map((testimonial, index) => (
+              {TESTIMONIALS.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
                   className={`transition-all duration-700 ${
@@ -218,7 +184,7 @@ const Testimonials = () => {
           <div className="flex items-center justify-center gap-6 mt-10">
             {/* Prev button */}
             <button
-              onClick={() => goToSlide(activeIndex > 0 ? activeIndex - 1 : testimonials.length - 1)}
+              onClick={() => goToSlide(activeIndex > 0 ? activeIndex - 1 : TESTIMONIALS.length - 1)}
               className="w-10 h-10 flex items-center justify-center border border-[var(--color-paper)]/20 text-[var(--color-paper)]/50 hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,7 +194,7 @@ const Testimonials = () => {
 
             {/* Dots with progress */}
             <div className="flex gap-3">
-              {testimonials.map((_, index) => (
+              {TESTIMONIALS.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
@@ -255,7 +221,7 @@ const Testimonials = () => {
 
             {/* Next button */}
             <button
-              onClick={() => goToSlide((activeIndex + 1) % testimonials.length)}
+              onClick={() => goToSlide((activeIndex + 1) % TESTIMONIALS.length)}
               className="w-10 h-10 flex items-center justify-center border border-[var(--color-paper)]/20 text-[var(--color-paper)]/50 hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

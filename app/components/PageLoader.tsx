@@ -8,28 +8,28 @@ const PageLoader = () => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // Simulate loading progress
+    // Simulate loading progress - 時間短縮版
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval);
           return 100;
         }
-        // Accelerate towards the end
-        const increment = prev < 70 ? 3 : prev < 90 ? 2 : 1;
+        // より速く加速
+        const increment = prev < 50 ? 5 : prev < 80 ? 4 : 3;
         return Math.min(prev + increment, 100);
       });
-    }, 30);
+    }, 25);
 
-    // Start exit animation
+    // Start exit animation - 時間短縮
     const exitTimer = setTimeout(() => {
       setIsExiting(true);
-    }, 1800);
+    }, 1200);
 
-    // Complete loading
+    // Complete loading - 時間短縮
     const completeTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 2300);
+    }, 1600);
 
     return () => {
       clearInterval(progressInterval);

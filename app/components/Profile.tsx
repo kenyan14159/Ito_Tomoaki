@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { socialLinks } from '../constants/socialLinks';
+import ImageModal from './ImageModal';
 
 const Profile = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const profileImageUrl = 'https://nssu-ekiden.com/wp-content/uploads/2025/02/itotomoaki.jpg';
+  const profileImageUrl = '/itotomoaki.jpg';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,17 +28,6 @@ const Profile = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isModalOpen]);
-
   const qualifications = [
     '鍼灸師',
     'あん摩マッサージ指圧師',
@@ -52,49 +43,6 @@ const Profile = () => {
     { type: '高校', name: '浜松日体高校', detail: '駅伝部' },
     { type: '大学', name: '関東学院大学 経営学部', detail: '駅伝部' },
     { type: '専門学校', name: '呉竹鍼灸柔整専門学校', detail: '鍼灸あん摩マッサージ指圧科' },
-  ];
-
-  const socialLinks = [
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/tomo.icoco',
-      colorClass: 'social-icon-instagram',
-      icon: (
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
-        </svg>
-      ),
-    },
-    {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/profile.php?id=100007170611509',
-      colorClass: 'social-icon-facebook',
-      icon: (
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
-      ),
-    },
-    {
-      name: 'X',
-      url: 'https://x.com/tomo_i_coco',
-      colorClass: 'social-icon-x',
-      icon: (
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-      ),
-    },
-    {
-      name: 'Threads',
-      url: 'https://www.threads.com/@tomo.icoco',
-      colorClass: 'social-icon-threads',
-      icon: (
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.187.408-2.281 1.333-3.08.853-.737 2.063-1.17 3.504-1.252 1.048-.06 2.015.043 2.881.308-.088-1.013-.471-1.773-1.148-2.273-.775-.572-1.932-.861-3.443-.861h-.016c-1.228.007-2.214.28-2.93.813l-1.132-1.71c1.081-.804 2.523-1.218 4.287-1.233h.023c1.973 0 3.54.467 4.658 1.388.94.773 1.548 1.86 1.816 3.238.746.324 1.412.744 1.98 1.253 1.056.945 1.67 2.181 1.823 3.676.186 1.818-.28 3.703-1.348 5.46-1.2 1.974-3.088 3.469-5.618 4.446-1.476.57-3.094.859-4.812.859z"/>
-        </svg>
-      ),
-    },
   ];
 
   return (
@@ -292,33 +240,12 @@ const Profile = () => {
       </section>
 
       {/* Modal */}
-      {isModalOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md cursor-pointer animate-fade-in"
-          onClick={() => setIsModalOpen(false)}
-        >
-          <button
-            className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white/70 hover:text-white hover:rotate-90 transition-all duration-300"
-            onClick={() => setIsModalOpen(false)}
-            aria-label="閉じる"
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div 
-            className="relative max-w-4xl max-h-[90vh] w-full mx-4 animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={profileImageUrl}
-              alt="伊藤智章"
-              className="object-contain w-full h-auto max-h-[90vh] shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={profileImageUrl}
+        imageAlt="伊藤智章"
+      />
     </>
   );
 };

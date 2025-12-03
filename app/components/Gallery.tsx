@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,6 +9,73 @@ const Gallery = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
   const INITIAL_DISPLAY_COUNT = 12;
+
+  // Gallery images - コンポーネント外で定義して安定した参照を維持
+  const galleryImages = useMemo(() => [
+    { id: 1, src: '/ito_gallery/Ito-photo1.JPG', title: 'Photo 1', category: 'Photography' },
+    { id: 2, src: '/ito_gallery/Ito-photo2.JPG', title: 'Photo 2', category: 'Photography' },
+    { id: 3, src: '/ito_gallery/Ito-photo3.JPG', title: 'Photo 3', category: 'Photography' },
+    { id: 4, src: '/ito_gallery/Ito-photo4.JPG', title: 'Photo 4', category: 'Photography' },
+    { id: 5, src: '/ito_gallery/Ito-photo5.JPG', title: 'Photo 5', category: 'Photography' },
+    { id: 6, src: '/ito_gallery/Ito-photo6.JPG', title: 'Photo 6', category: 'Photography' },
+    { id: 7, src: '/ito_gallery/Ito-photo7.JPG', title: 'Photo 7', category: 'Photography' },
+    { id: 8, src: '/ito_gallery/Ito-photo8.JPG', title: 'Photo 8', category: 'Photography' },
+    { id: 9, src: '/ito_gallery/Ito-photo9.JPG', title: 'Photo 9', category: 'Photography' },
+    { id: 10, src: '/ito_gallery/Ito-photo10.JPG', title: 'Photo 10', category: 'Photography' },
+    { id: 11, src: '/ito_gallery/Ito-photo11.JPG', title: 'Photo 11', category: 'Photography' },
+    { id: 12, src: '/ito_gallery/Ito-photo12.JPG', title: 'Photo 12', category: 'Photography' },
+    { id: 13, src: '/ito_gallery/Ito-photo13.JPG', title: 'Photo 13', category: 'Photography' },
+    { id: 14, src: '/ito_gallery/Ito-photo14.JPG', title: 'Photo 14', category: 'Photography' },
+    { id: 15, src: '/ito_gallery/Ito-photo15.JPG', title: 'Photo 15', category: 'Photography' },
+    { id: 16, src: '/ito_gallery/Ito-photo16.JPG', title: 'Photo 16', category: 'Photography' },
+    { id: 17, src: '/ito_gallery/Ito-photo17.JPG', title: 'Photo 17', category: 'Photography' },
+    { id: 18, src: '/ito_gallery/Ito-photo18.JPG', title: 'Photo 18', category: 'Photography' },
+    { id: 19, src: '/ito_gallery/Ito-photo19.JPG', title: 'Photo 19', category: 'Photography' },
+    { id: 20, src: '/ito_gallery/Ito-photo20.JPG', title: 'Photo 20', category: 'Photography' },
+    { id: 21, src: '/ito_gallery/Ito-photo21.JPG', title: 'Photo 21', category: 'Photography' },
+    { id: 22, src: '/ito_gallery/Ito-photo22.JPG', title: 'Photo 22', category: 'Photography' },
+    { id: 23, src: '/ito_gallery/Ito-photo23.JPG', title: 'Photo 23', category: 'Photography' },
+    { id: 24, src: '/ito_gallery/Ito-photo24.JPG', title: 'Photo 24', category: 'Photography' },
+    { id: 25, src: '/ito_gallery/Ito-photo25.JPG', title: 'Photo 25', category: 'Photography' },
+    { id: 26, src: '/ito_gallery/Ito-photo26.JPG', title: 'Photo 26', category: 'Photography' },
+    { id: 27, src: '/ito_gallery/Ito-photo27.JPG', title: 'Photo 27', category: 'Photography' },
+    { id: 28, src: '/ito_gallery/Ito-photo28.JPG', title: 'Photo 28', category: 'Photography' },
+    { id: 29, src: '/ito_gallery/Ito-photo29.JPG', title: 'Photo 29', category: 'Photography' },
+    { id: 30, src: '/ito_gallery/Ito-photo30.JPG', title: 'Photo 30', category: 'Photography' },
+    { id: 31, src: '/ito_gallery/Ito-photo31.JPG', title: 'Photo 31', category: 'Photography' },
+    { id: 32, src: '/ito_gallery/Ito-photo32.JPG', title: 'Photo 32', category: 'Photography' },
+    { id: 33, src: '/ito_gallery/Ito-photo33.JPG', title: 'Photo 33', category: 'Photography' },
+    { id: 34, src: '/ito_gallery/Ito-photo34.JPG', title: 'Photo 34', category: 'Photography' },
+    { id: 35, src: '/ito_gallery/Ito-photo35.JPG', title: 'Photo 35', category: 'Photography' },
+    { id: 36, src: '/ito_gallery/Ito-photo36.JPG', title: 'Photo 36', category: 'Photography' },
+    { id: 37, src: '/ito_gallery/Ito-photo37.JPG', title: 'Photo 37', category: 'Photography' },
+  ], []);
+
+  // ランダムにシャッフルした画像配列（初回レンダリング時に固定）
+  const shuffledImages = useMemo(() => {
+    const shuffled = [...galleryImages];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }, [galleryImages]);
+
+  const closeModal = useCallback(() => setSelectedImage(null), []);
+
+  const navigateImage = useCallback((direction: number) => {
+    setSelectedImage((prev) => {
+      if (prev === null) return null;
+      const newIndex = prev + direction;
+      if (newIndex >= 0 && newIndex < shuffledImages.length) {
+        return newIndex;
+      } else if (newIndex < 0) {
+        return shuffledImages.length - 1;
+      } else {
+        return 0;
+      }
+    });
+  }, [shuffledImages.length]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,72 +105,7 @@ const Gallery = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
-
-  // Gallery images
-  const galleryImages = [
-    { id: 1, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo1-scaled.jpg', title: 'Photo 1', category: 'Photography' },
-    { id: 2, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo2-scaled.jpg', title: 'Photo 2', category: 'Photography' },
-    { id: 3, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo3-scaled.jpg', title: 'Photo 3', category: 'Photography' },
-    { id: 4, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo4-scaled.jpg', title: 'Photo 4', category: 'Photography' },
-    { id: 5, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo5-scaled.jpg', title: 'Photo 5', category: 'Photography' },
-    { id: 6, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo6-scaled.jpg', title: 'Photo 6', category: 'Photography' },
-    { id: 7, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo7-scaled.jpg', title: 'Photo 7', category: 'Photography' },
-    { id: 8, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo8-scaled.jpg', title: 'Photo 8', category: 'Photography' },
-    { id: 9, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo9-scaled.jpg', title: 'Photo 9', category: 'Photography' },
-    { id: 10, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo10-scaled.jpg', title: 'Photo 10', category: 'Photography' },
-    { id: 11, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo11-scaled.jpg', title: 'Photo 11', category: 'Photography' },
-    { id: 12, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo12-scaled.jpg', title: 'Photo 12', category: 'Photography' },
-    { id: 13, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo13-scaled.jpg', title: 'Photo 13', category: 'Photography' },
-    { id: 14, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo14-scaled.jpg', title: 'Photo 14', category: 'Photography' },
-    { id: 15, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo15-scaled.jpg', title: 'Photo 15', category: 'Photography' },
-    { id: 16, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo16-scaled.jpg', title: 'Photo 16', category: 'Photography' },
-    { id: 17, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo17-scaled.jpg', title: 'Photo 17', category: 'Photography' },
-    { id: 18, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo18-scaled.jpg', title: 'Photo 18', category: 'Photography' },
-    { id: 19, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo19-scaled.jpg', title: 'Photo 19', category: 'Photography' },
-    { id: 20, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo20-scaled.jpg', title: 'Photo 20', category: 'Photography' },
-    { id: 21, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo21-scaled.jpg', title: 'Photo 21', category: 'Photography' },
-    { id: 22, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo22-scaled.jpg', title: 'Photo 22', category: 'Photography' },
-    { id: 23, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo23-scaled.jpg', title: 'Photo 23', category: 'Photography' },
-    { id: 24, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo24-scaled.jpg', title: 'Photo 24', category: 'Photography' },
-    { id: 25, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo25-scaled.jpg', title: 'Photo 25', category: 'Photography' },
-    { id: 26, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo26-scaled.jpg', title: 'Photo 26', category: 'Photography' },
-    { id: 27, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo27-scaled.jpg', title: 'Photo 27', category: 'Photography' },
-    { id: 28, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo28-scaled.jpg', title: 'Photo 28', category: 'Photography' },
-    { id: 29, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo29-scaled.jpg', title: 'Photo 29', category: 'Photography' },
-    { id: 30, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo30-scaled.jpg', title: 'Photo 30', category: 'Photography' },
-    { id: 31, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo31-scaled.jpg', title: 'Photo 31', category: 'Photography' },
-    { id: 32, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo32-scaled.jpg', title: 'Photo 32', category: 'Photography' },
-    { id: 33, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo33-scaled.jpg', title: 'Photo 33', category: 'Photography' },
-    { id: 34, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo34-scaled.jpg', title: 'Photo 34', category: 'Photography' },
-    { id: 35, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo35-scaled.jpg', title: 'Photo 35', category: 'Photography' },
-    { id: 36, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo36-scaled.jpg', title: 'Photo 36', category: 'Photography' },
-    { id: 37, src: 'https://wprs.my-hobby.space/wp-content/uploads/2025/11/Ito-photo37-scaled.jpg', title: 'Photo 37', category: 'Photography' },
-  ];
-
-  // ランダムにシャッフルした画像配列（初回レンダリング時に固定）
-  const shuffledImages = useMemo(() => {
-    const shuffled = [...galleryImages];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  }, []);
-
-  const closeModal = () => setSelectedImage(null);
-
-  const navigateImage = (direction: number) => {
-    if (selectedImage === null) return;
-    const newIndex = selectedImage + direction;
-    if (newIndex >= 0 && newIndex < shuffledImages.length) {
-      setSelectedImage(newIndex);
-    } else if (newIndex < 0) {
-      setSelectedImage(shuffledImages.length - 1);
-    } else {
-      setSelectedImage(0);
-    }
-  };
+  }, [selectedImage, closeModal, navigateImage]);
 
   // Touch handlers for swipe
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -249,11 +251,15 @@ const Gallery = () => {
           onClick={closeModal}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
+          role="dialog"
+          aria-modal="true"
+          aria-label="ギャラリー画像ビューアー"
         >
           {/* Close button */}
           <button
             className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-[var(--color-paper)]/70 hover:text-[var(--color-paper)] hover:rotate-90 transition-all duration-300 z-10"
             onClick={closeModal}
+            aria-label="閉じる"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -299,6 +305,7 @@ const Gallery = () => {
               e.stopPropagation();
               navigateImage(-1);
             }}
+            aria-label="前の画像"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
@@ -310,27 +317,29 @@ const Gallery = () => {
               e.stopPropagation();
               navigateImage(1);
             }}
+            aria-label="次の画像"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Thumbnail navigation */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 max-w-[80vw] overflow-x-auto">
-            {shuffledImages.slice(0, 20).map((img, index) => (
+          {/* Thumbnail navigation - 全画像に対応 */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 max-w-[90vw] overflow-x-auto py-2 px-4 scrollbar-hide">
+            {shuffledImages.map((img, index) => (
               <button
                 key={index}
                 onClick={(e) => {
                   e.stopPropagation();
                   if (img.src) setSelectedImage(index);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0 ${
+                aria-label={`画像 ${index + 1} を表示`}
+                className={`transition-all duration-300 flex-shrink-0 rounded-full ${
                   index === selectedImage
-                    ? 'bg-[var(--color-gold)] w-6'
+                    ? 'bg-[var(--color-gold)] w-5 h-2'
                     : img.src
-                      ? 'bg-[var(--color-paper)]/30 hover:bg-[var(--color-paper)]/50'
-                      : 'bg-[var(--color-paper)]/10'
+                      ? 'bg-[var(--color-paper)]/30 hover:bg-[var(--color-paper)]/50 w-2 h-2'
+                      : 'bg-[var(--color-paper)]/10 w-2 h-2'
                 }`}
               />
             ))}

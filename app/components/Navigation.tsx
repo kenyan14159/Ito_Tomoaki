@@ -2,20 +2,21 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
+// コンポーネント外に定義して依存配列の問題を回避
+const NAV_LINKS = [
+  { href: '#profile', label: 'Profile', id: 'profile' },
+  { href: '#achievements', label: 'Achievements', id: 'achievements' },
+  { href: '#treatment', label: 'Treatment', id: 'treatment' },
+  { href: '#gallery', label: 'Gallery', id: 'gallery' },
+  { href: '#testimonials', label: 'Voice', id: 'testimonials' },
+  { href: '#contact', label: 'Contact', id: 'contact' },
+] as const;
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [scrollProgress, setScrollProgress] = useState(0);
-
-  const navLinks = [
-    { href: '#profile', label: 'Profile', id: 'profile' },
-    { href: '#achievements', label: 'Achievements', id: 'achievements' },
-    { href: '#treatment', label: 'Treatment', id: 'treatment' },
-    { href: '#gallery', label: 'Gallery', id: 'gallery' },
-    { href: '#testimonials', label: 'Voice', id: 'testimonials' },
-    { href: '#contact', label: 'Contact', id: 'contact' },
-  ];
 
   // Track scroll position and active section
   const handleScroll = useCallback(() => {
@@ -28,7 +29,7 @@ const Navigation = () => {
     setScrollProgress(progress);
 
     // Active section detection
-    const sections = navLinks.map(link => document.querySelector(link.href));
+    const sections = NAV_LINKS.map(link => document.querySelector(link.href));
     const scrollPosition = window.scrollY + window.innerHeight / 3;
 
     for (let i = sections.length - 1; i >= 0; i--) {
@@ -37,7 +38,7 @@ const Navigation = () => {
         const rect = section.getBoundingClientRect();
         const top = rect.top + window.scrollY;
         if (scrollPosition >= top) {
-          setActiveSection(navLinks[i].id);
+          setActiveSection(NAV_LINKS[i].id);
           break;
         }
       }
@@ -104,7 +105,7 @@ const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6 lg:gap-10">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -156,7 +157,9 @@ const Navigation = () => {
             <button
               className="md:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               <span
                 className={`block w-6 h-[1.5px] transition-all duration-300 ${
@@ -183,15 +186,17 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 z-40 bg-[var(--color-paper)] transition-all duration-500 md:hidden ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
+        aria-hidden={!isMobileMenuOpen}
       >
         {/* Background pattern */}
         <div className="absolute inset-0 pattern-asanoha opacity-20" />
         
         <div className="flex flex-col items-center justify-center h-full gap-6 relative">
-          {navLinks.map((link, index) => (
+          {NAV_LINKS.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
@@ -231,7 +236,7 @@ const Navigation = () => {
               transition: 'opacity 0.5s ease 0.4s',
             }}
           >
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <div 
                 key={link.id}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
