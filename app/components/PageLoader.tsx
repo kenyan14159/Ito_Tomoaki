@@ -8,33 +8,57 @@ const PageLoader = () => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // Simulate loading progress - 時間短縮版
+    // 実際のリソース読み込みを監視
+    const checkLoadState = () => {
+      if (document.readyState === 'complete') {
+        setIsExiting(true);
+        setTimeout(() => setIsLoading(false), 300);
+        return true;
+      }
+      return false;
+    };
+
+    // 既に読み込み完了している場合
+    if (checkLoadState()) {
+      return;
+    }
+
+    // 読み込み進捗をシミュレート（実際の読み込みに合わせて調整）
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval);
           return 100;
         }
-        // より速く加速
-        const increment = prev < 50 ? 5 : prev < 80 ? 4 : 3;
+        const increment = prev < 50 ? 8 : prev < 80 ? 6 : 4;
         return Math.min(prev + increment, 100);
       });
-    }, 25);
+    }, 20);
 
-    // Start exit animation - 時間短縮
-    const exitTimer = setTimeout(() => {
+    // 実際の読み込み完了を監視
+    const handleLoad = () => {
+      setProgress(100);
       setIsExiting(true);
-    }, 1200);
+      setTimeout(() => setIsLoading(false), 300);
+    };
 
-    // Complete loading - 時間短縮
-    const completeTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1600);
+    window.addEventListener('load', handleLoad);
+
+    // 最大500msで強制終了（UX向上のため）
+    const maxTimer = setTimeout(() => {
+      if (document.readyState === 'complete') {
+        handleLoad();
+      } else {
+        setProgress(100);
+        setIsExiting(true);
+        setTimeout(() => setIsLoading(false), 300);
+      }
+    }, 500);
 
     return () => {
       clearInterval(progressInterval);
-      clearTimeout(exitTimer);
-      clearTimeout(completeTimer);
+      clearTimeout(maxTimer);
+      window.removeEventListener('load', handleLoad);
     };
   }, []);
 
@@ -125,4 +149,5 @@ const PageLoader = () => {
 };
 
 export default PageLoader;
+
 

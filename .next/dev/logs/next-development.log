@@ -1,1 +1,282 @@
-[00:00:00.755] Server  LOG      ✓ Ready in 556ms
+[00:00:01.161] Server  LOG      ✓ Ready in 632ms
+[00:00:04.207] Server  LOG      ○ Compiling / ...
+[00:00:51.661] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.129] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="ja"
+                          className="cormorant_garamond_dfa01946-module__wvvK2q__variable noto_serif_jp_694c6a4a-modul..."
+-                         data-redeviation-bs-uid="e49oczaasis"
+                        >
+                          <head>
+                          ...
+                            <div className="grid grid-...">
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo7.JPG"
+-                                 src="/ito_gallery/Ito-photo9.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo13.JPG"
+-                                 src="/ito_gallery/Ito-photo19.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo9.JPG"
+-                                 src="/ito_gallery/Ito-photo3.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo10.JPG"
+-                                 src="/ito_gallery/Ito-photo23.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo37.JPG"
+-                                 src="/ito_gallery/Ito-photo31.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo4.JPG"
+-                                 src="/ito_gallery/Ito-photo13.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo14.JPG"
+-                                 src="/ito_gallery/Ito-photo6.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo11.JPG"
+-                                 src="/ito_gallery/Ito-photo37.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo31.JPG"
+-                                 src="/ito_gallery/Ito-photo12.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo22.JPG"
+-                                 src="/ito_gallery/Ito-photo33.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo36.JPG"
+-                                 src="/ito_gallery/Ito-photo34.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                              ...
+                                <img
+                                  alt="伊藤智章が撮影した風景写真"
+                                  draggable={false}
+                                  fetchPriority={undefined}
+                                  loading="lazy"
+                                  width={undefined}
+                                  height={undefined}
+                                  decoding="async"
+                                  data-nimg="fill"
+                                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                                  style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                  sizes={undefined}
+                                  srcSet={undefined}
++                                 src="/ito_gallery/Ito-photo34.JPG"
+-                                 src="/ito_gallery/Ito-photo16.JPG"
+                                  ref={function}
+                                  onLoad={function onLoad}
+                                  onError={function onError}
+                                >
+                  ...
+
+[00:00:53.265] Browser WARN    Image with src "http://localhost:3000/nssu_icon.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { socialLinks } from '../constants/socialLinks';
 import ImageModal from './ImageModal';
 
@@ -76,11 +77,13 @@ const Profile = () => {
                 className="relative aspect-[4/5] bg-[var(--color-ink-light)] overflow-hidden cursor-pointer group"
                 onClick={() => setIsModalOpen(true)}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={profileImageUrl}
-                  alt="伊藤智章"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt="伊藤智章 - 鍼灸師・あん摩マッサージ指圧師"
+                  fill
+                  quality={85}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
                 {/* Decorative frame */}

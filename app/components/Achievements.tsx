@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 const Achievements = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -90,11 +91,13 @@ const Achievements = () => {
               {/* Logo */}
               <div className="relative">
                 <div className="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-2 border-[var(--color-gold)]/30 transition-all duration-500 group-hover:border-[var(--color-gold)]/60">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/nssu_icon.jpg"
-                    alt="日本体育大学"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt="日本体育大学駅伝部ロゴ"
+                    fill
+                    quality={85}
+                    sizes="128px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 {/* Decorative ring */}

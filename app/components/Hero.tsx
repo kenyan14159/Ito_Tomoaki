@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import ImageModal from './ImageModal';
 
 const Hero = () => {
@@ -48,11 +49,14 @@ const Hero = () => {
             }}
           />
           
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={profileImageUrl}
-            alt="伊藤智章"
-            className="absolute inset-0 w-full h-full object-cover object-[70%_top] md:object-[30%_top] cursor-pointer"
+            alt="伊藤智章 - 鍼灸師・コンディショニングトレーナー"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-[70%_top] md:object-[30%_top] cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           />
         </div>

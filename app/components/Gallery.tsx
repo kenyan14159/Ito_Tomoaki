@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
+import Image from 'next/image';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -10,45 +11,45 @@ const Gallery = () => {
   const [showAll, setShowAll] = useState(false);
   const INITIAL_DISPLAY_COUNT = 12;
 
-  // Gallery images - コンポーネント外で定義して安定した参照を維持
+  // Gallery images - 意味のあるalt属性を追加
   const galleryImages = useMemo(() => [
-    { id: 1, src: '/ito_gallery/Ito-photo1.JPG', title: 'Photo 1', category: 'Photography' },
-    { id: 2, src: '/ito_gallery/Ito-photo2.JPG', title: 'Photo 2', category: 'Photography' },
-    { id: 3, src: '/ito_gallery/Ito-photo3.JPG', title: 'Photo 3', category: 'Photography' },
-    { id: 4, src: '/ito_gallery/Ito-photo4.JPG', title: 'Photo 4', category: 'Photography' },
-    { id: 5, src: '/ito_gallery/Ito-photo5.JPG', title: 'Photo 5', category: 'Photography' },
-    { id: 6, src: '/ito_gallery/Ito-photo6.JPG', title: 'Photo 6', category: 'Photography' },
-    { id: 7, src: '/ito_gallery/Ito-photo7.JPG', title: 'Photo 7', category: 'Photography' },
-    { id: 8, src: '/ito_gallery/Ito-photo8.JPG', title: 'Photo 8', category: 'Photography' },
-    { id: 9, src: '/ito_gallery/Ito-photo9.JPG', title: 'Photo 9', category: 'Photography' },
-    { id: 10, src: '/ito_gallery/Ito-photo10.JPG', title: 'Photo 10', category: 'Photography' },
-    { id: 11, src: '/ito_gallery/Ito-photo11.JPG', title: 'Photo 11', category: 'Photography' },
-    { id: 12, src: '/ito_gallery/Ito-photo12.JPG', title: 'Photo 12', category: 'Photography' },
-    { id: 13, src: '/ito_gallery/Ito-photo13.JPG', title: 'Photo 13', category: 'Photography' },
-    { id: 14, src: '/ito_gallery/Ito-photo14.JPG', title: 'Photo 14', category: 'Photography' },
-    { id: 15, src: '/ito_gallery/Ito-photo15.JPG', title: 'Photo 15', category: 'Photography' },
-    { id: 16, src: '/ito_gallery/Ito-photo16.JPG', title: 'Photo 16', category: 'Photography' },
-    { id: 17, src: '/ito_gallery/Ito-photo17.JPG', title: 'Photo 17', category: 'Photography' },
-    { id: 18, src: '/ito_gallery/Ito-photo18.JPG', title: 'Photo 18', category: 'Photography' },
-    { id: 19, src: '/ito_gallery/Ito-photo19.JPG', title: 'Photo 19', category: 'Photography' },
-    { id: 20, src: '/ito_gallery/Ito-photo20.JPG', title: 'Photo 20', category: 'Photography' },
-    { id: 21, src: '/ito_gallery/Ito-photo21.JPG', title: 'Photo 21', category: 'Photography' },
-    { id: 22, src: '/ito_gallery/Ito-photo22.JPG', title: 'Photo 22', category: 'Photography' },
-    { id: 23, src: '/ito_gallery/Ito-photo23.JPG', title: 'Photo 23', category: 'Photography' },
-    { id: 24, src: '/ito_gallery/Ito-photo24.JPG', title: 'Photo 24', category: 'Photography' },
-    { id: 25, src: '/ito_gallery/Ito-photo25.JPG', title: 'Photo 25', category: 'Photography' },
-    { id: 26, src: '/ito_gallery/Ito-photo26.JPG', title: 'Photo 26', category: 'Photography' },
-    { id: 27, src: '/ito_gallery/Ito-photo27.JPG', title: 'Photo 27', category: 'Photography' },
-    { id: 28, src: '/ito_gallery/Ito-photo28.JPG', title: 'Photo 28', category: 'Photography' },
-    { id: 29, src: '/ito_gallery/Ito-photo29.JPG', title: 'Photo 29', category: 'Photography' },
-    { id: 30, src: '/ito_gallery/Ito-photo30.JPG', title: 'Photo 30', category: 'Photography' },
-    { id: 31, src: '/ito_gallery/Ito-photo31.JPG', title: 'Photo 31', category: 'Photography' },
-    { id: 32, src: '/ito_gallery/Ito-photo32.JPG', title: 'Photo 32', category: 'Photography' },
-    { id: 33, src: '/ito_gallery/Ito-photo33.JPG', title: 'Photo 33', category: 'Photography' },
-    { id: 34, src: '/ito_gallery/Ito-photo34.JPG', title: 'Photo 34', category: 'Photography' },
-    { id: 35, src: '/ito_gallery/Ito-photo35.JPG', title: 'Photo 35', category: 'Photography' },
-    { id: 36, src: '/ito_gallery/Ito-photo36.JPG', title: 'Photo 36', category: 'Photography' },
-    { id: 37, src: '/ito_gallery/Ito-photo37.JPG', title: 'Photo 37', category: 'Photography' },
+    { id: 1, src: '/ito_gallery/Ito-photo1.JPG', title: '風景写真 1', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 2, src: '/ito_gallery/Ito-photo2.JPG', title: '風景写真 2', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 3, src: '/ito_gallery/Ito-photo3.JPG', title: '風景写真 3', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 4, src: '/ito_gallery/Ito-photo4.JPG', title: '風景写真 4', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 5, src: '/ito_gallery/Ito-photo5.JPG', title: '風景写真 5', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 6, src: '/ito_gallery/Ito-photo6.JPG', title: '風景写真 6', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 7, src: '/ito_gallery/Ito-photo7.JPG', title: '風景写真 7', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 8, src: '/ito_gallery/Ito-photo8.JPG', title: '風景写真 8', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 9, src: '/ito_gallery/Ito-photo9.JPG', title: '風景写真 9', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 10, src: '/ito_gallery/Ito-photo10.JPG', title: '風景写真 10', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 11, src: '/ito_gallery/Ito-photo11.JPG', title: '風景写真 11', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 12, src: '/ito_gallery/Ito-photo12.JPG', title: '風景写真 12', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 13, src: '/ito_gallery/Ito-photo13.JPG', title: '風景写真 13', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 14, src: '/ito_gallery/Ito-photo14.JPG', title: '風景写真 14', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 15, src: '/ito_gallery/Ito-photo15.JPG', title: '風景写真 15', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 16, src: '/ito_gallery/Ito-photo16.JPG', title: '風景写真 16', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 17, src: '/ito_gallery/Ito-photo17.JPG', title: '風景写真 17', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 18, src: '/ito_gallery/Ito-photo18.JPG', title: '風景写真 18', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 19, src: '/ito_gallery/Ito-photo19.JPG', title: '風景写真 19', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 20, src: '/ito_gallery/Ito-photo20.JPG', title: '風景写真 20', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 21, src: '/ito_gallery/Ito-photo21.JPG', title: '風景写真 21', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 22, src: '/ito_gallery/Ito-photo22.JPG', title: '風景写真 22', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 23, src: '/ito_gallery/Ito-photo23.JPG', title: '風景写真 23', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 24, src: '/ito_gallery/Ito-photo24.JPG', title: '風景写真 24', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 25, src: '/ito_gallery/Ito-photo25.JPG', title: '風景写真 25', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 26, src: '/ito_gallery/Ito-photo26.JPG', title: '風景写真 26', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 27, src: '/ito_gallery/Ito-photo27.JPG', title: '風景写真 27', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 28, src: '/ito_gallery/Ito-photo28.JPG', title: '風景写真 28', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 29, src: '/ito_gallery/Ito-photo29.JPG', title: '風景写真 29', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 30, src: '/ito_gallery/Ito-photo30.JPG', title: '風景写真 30', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 31, src: '/ito_gallery/Ito-photo31.JPG', title: '風景写真 31', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 32, src: '/ito_gallery/Ito-photo32.JPG', title: '風景写真 32', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 33, src: '/ito_gallery/Ito-photo33.JPG', title: '風景写真 33', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 34, src: '/ito_gallery/Ito-photo34.JPG', title: '風景写真 34', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 35, src: '/ito_gallery/Ito-photo35.JPG', title: '風景写真 35', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 36, src: '/ito_gallery/Ito-photo36.JPG', title: '風景写真 36', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
+    { id: 37, src: '/ito_gallery/Ito-photo37.JPG', title: '風景写真 37', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
   ], []);
 
   // ランダムにシャッフルした画像配列（初回レンダリング時に固定）
@@ -176,11 +177,14 @@ const Gallery = () => {
                   {/* Placeholder or Image */}
                   {image.src ? (
                     <>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={image.src}
-                        alt={image.title}
-                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                        alt={image.alt || image.title}
+                        fill
+                        loading="lazy"
+                        quality={80}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover transition-all duration-700 group-hover:scale-105"
                         draggable={false}
                       />
                     </>
@@ -281,12 +285,15 @@ const Gallery = () => {
           >
             {/* Image */}
             <div className="relative flex items-center justify-center" style={{ maxHeight: '80vh' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={shuffledImages[selectedImage].src!}
-                alt={shuffledImages[selectedImage].title}
-                className="max-w-full max-h-[80vh] object-contain select-none"
+                alt={shuffledImages[selectedImage].alt || shuffledImages[selectedImage].title}
+                width={1920}
+                height={1080}
+                quality={90}
+                className="max-w-full max-h-[80vh] w-auto h-auto object-contain select-none"
                 draggable={false}
+                priority={selectedImage === 0}
               />
             </div>
 

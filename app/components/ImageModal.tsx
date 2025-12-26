@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -49,11 +50,14 @@ const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }: ImageModalProps) =>
         className="relative max-w-4xl max-h-[90vh] w-full mx-4 animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={imageSrc}
           alt={imageAlt}
+          width={1920}
+          height={1080}
+          quality={90}
           className="object-contain w-full h-auto max-h-[90vh] shadow-2xl"
+          priority
         />
       </div>
     </div>
