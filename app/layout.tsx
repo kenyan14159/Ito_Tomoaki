@@ -141,7 +141,7 @@ export default function RootLayout({
 
   return (
     <html lang="ja" className={`${cormorantGaramond.variable} ${notoSerifJP.variable} ${zenKakuGothicNew.variable}`}>
-      <head>
+      <body className="grain-effect">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -150,8 +150,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-      </head>
-      <body className="grain-effect">
         {children}
       </body>
     </html>

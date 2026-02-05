@@ -52,14 +52,16 @@ const Gallery = () => {
     { id: 37, src: '/ito_gallery/Ito-photo37.JPG', title: '風景写真 37', alt: '伊藤智章が撮影した風景写真', category: 'Photography' },
   ], []);
 
-  // ランダムにシャッフルした画像配列（初回レンダリング時に固定）
-  const shuffledImages = useMemo(() => {
+  // ランダムにシャッフルした画像配列（初回レンダリング時は元の順番、マウント後にシャッフル）
+  const [shuffledImages, setShuffledImages] = useState(galleryImages);
+
+  useEffect(() => {
     const shuffled = [...galleryImages];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    return shuffled;
+    setShuffledImages(shuffled);
   }, [galleryImages]);
 
   const closeModal = useCallback(() => setSelectedImage(null), []);
@@ -137,9 +139,8 @@ const Gallery = () => {
         <div className="container-custom relative z-10">
           {/* Section Header */}
           <div
-            className={`mb-12 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+            className={`mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
           >
             <div className="flex items-center gap-4 mb-6">
               <span className="gold-line" />
@@ -166,34 +167,33 @@ const Gallery = () => {
               return (
                 <div
                   key={image.id}
-                  className={`group cursor-pointer overflow-hidden transition-all duration-700 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                  }`}
+                  className={`group cursor-pointer overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                    }`}
                   style={{ transitionDelay: `${Math.min(index * 50, 600)}ms` }}
                   onClick={() => image.src && setSelectedImage(index)}
                   onContextMenu={(e) => e.preventDefault()}
                 >
                   <div className="relative aspect-[3/4] bg-[var(--color-ink-light)] overflow-hidden rounded-sm">
-                  {/* Placeholder or Image */}
-                  {image.src ? (
-                    <>
-                      <Image
-                        src={image.src}
-                        alt={image.alt || image.title}
-                        fill
-                        loading="lazy"
-                        quality={80}
-                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        className="object-cover transition-all duration-700 group-hover:scale-105"
-                        draggable={false}
-                      />
-                    </>
-                  ) : (
-                    // Placeholder gradient
-                    <div
-                      className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
-                      style={{
-                        background: `
+                    {/* Placeholder or Image */}
+                    {image.src ? (
+                      <>
+                        <Image
+                          src={image.src}
+                          alt={image.alt || image.title}
+                          fill
+                          loading="lazy"
+                          quality={80}
+                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          className="object-cover transition-all duration-700 group-hover:scale-105"
+                          draggable={false}
+                        />
+                      </>
+                    ) : (
+                      // Placeholder gradient
+                      <div
+                        className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+                        style={{
+                          background: `
                           linear-gradient(
                             ${135 + index * 30}deg,
                             rgba(26, 26, 26, 1) 0%,
@@ -201,25 +201,25 @@ const Gallery = () => {
                             rgba(26, 26, 26, 1) 100%
                           )
                         `,
-                      }}
-                    />
-                  )}
+                        }}
+                      />
+                    )}
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
 
-                  {/* Zoom icon on hover */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
+                    {/* Zoom icon on hover */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Corner decorations */}
-                  <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
-                  <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
+                    {/* Corner decorations */}
+                    <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
+                    <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[var(--color-gold)]/0 group-hover:border-[var(--color-gold)]/60 transition-all duration-500" />
                   </div>
                 </div>
               );
@@ -228,10 +228,9 @@ const Gallery = () => {
 
           {/* View All CTA */}
           {!showAll && shuffledImages.length > INITIAL_DISPLAY_COUNT && (
-            <div 
-              className={`mt-12 text-center transition-all duration-1000 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+            <div
+              className={`mt-12 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: '0.6s' }}
             >
               <button
@@ -341,13 +340,12 @@ const Gallery = () => {
                   if (img.src) setSelectedImage(index);
                 }}
                 aria-label={`画像 ${index + 1} を表示`}
-                className={`transition-all duration-300 flex-shrink-0 rounded-full ${
-                  index === selectedImage
+                className={`transition-all duration-300 flex-shrink-0 rounded-full ${index === selectedImage
                     ? 'bg-[var(--color-gold)] w-5 h-2'
                     : img.src
                       ? 'bg-[var(--color-paper)]/30 hover:bg-[var(--color-paper)]/50 w-2 h-2'
                       : 'bg-[var(--color-paper)]/10 w-2 h-2'
-                }`}
+                  }`}
               />
             ))}
           </div>
