@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   keywords: ["鍼灸", "コンディショニング", "アスリート", "スポーツケア", "横浜", "東京", "伊藤智章", "マッサージ", "治療院", "ライラック治療院"],
   authors: [{ name: "伊藤智章" }],
   verification: {
-    google: "_vkrt5VYZwh4thT0rUd7cyQaLnNyHJ6t_nuyEzwsHaY",
+    google: "JVhj5RcuGx3MV885XKsxscFxmYSOJ5TZOp8KB1JnERA",
   },
   robots: {
     index: true,
